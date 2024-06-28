@@ -5,7 +5,7 @@
 # Linear Regression
 
 $$
-\left(f_{\vec{w}, b}(\vec{x}^{(i)}) = \vec{w} \cdot \vec{x}^{(i)} + b 
+(f_{\vec{w}, b}(\vec{x}^{(i)}) = \vec{w} \cdot \vec{x}^{(i)} + b 
 $$
 
 ### Squared Cost Function
