@@ -7,5 +7,5 @@
 - Sigmoid Function:
 
 $$
-\frac{1}{1+ e^{-x}}
+g(z) = \frac{1}{1+ e^{-z}}  
 $$
