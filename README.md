@@ -6,13 +6,9 @@
 
 ### Squared Cost Function
 
-$$
-f_{\vec{w}, b}
-$$
-
 
 $$
-J(\vec{w}, b) = \frac{1}{2m} \sum_{i=1}^{m} \left( \vec{w} \cdot \vec{x}^{(i)} + b - y^{(i)} \right)^2
+J(\vec{w}, b) = \frac{1}{2m} \sum_{i=1}^{m} \left(f_{\vec{w}, b}(\vec{x}^{(i)}) - y^{(i)} \right)^2
 $$
 
 # Logistic Regression
