@@ -4,6 +4,7 @@
 
 # Linear Regression
 
+## Estimate Function
 $$
 f_{\vec{w}, b}(\vec{x}^{(i)} = \vec{w} \cdot \vec{x}^{(i)} + b 
 $$
