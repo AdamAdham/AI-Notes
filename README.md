@@ -4,4 +4,7 @@
 
 # Logistic Regression
 
-- Sigmoid Function: 1 / (1+ e^{-x}) 
+- Sigmoid Function: 
+$$
+\frac{1}{1+ e^{-x}}
+$$
