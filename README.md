@@ -7,10 +7,5 @@
 - Sigmoid Function:
 
 $$
-g(z) = \frac{1}{1+ e^{-z}} = g(vec\{w}.vec\{x}+b) = \frac{1}{1+ e^{-(vec\{w}.vec\{x}+b)}}
-$$
-
-
-$$
-\vec{x}
+g(z) = \frac{1}{1+ e^{-z}} = g(\( \vec{x} \).vec\{x}+b) = \frac{1}{1+ e^{-(vec\{w}.vec\{x}+b)}}
 $$
