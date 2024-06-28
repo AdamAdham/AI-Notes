@@ -4,7 +4,8 @@
 
 # Logistic Regression
 
-- Sigmoid Function: 
+- Sigmoid Function:
+
 $$
 \frac{1}{1+ e^{-x}}
 $$
