@@ -51,7 +51,7 @@ $$
 Because when we use previous cost function, there will exist many local minima which the gradient descent can be stuck at it.
 
 
-![Screenshot](./Comparison.png){width="400px"}
+![Screenshot](./Comparison.png){width=400px}
 
 $$
 L(h_{\vec{w}, b}(\vec{x}^{(i)}), 1) = -\log(h_{\vec{w}, b}(\vec{x}^{(i)})) \quad\quad || \quad\quad \ y^{(i)} = 1
