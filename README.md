@@ -47,8 +47,9 @@ $$
 
 ### Loss Function
 
-- Why different than linear regression loss function?
-Because when we use previous cost function, there will exist many local minima which the gradient descent can be stuck at it
+- **Why is the logistic regression loss function different from the linear regression loss function?**
+  Because when we use the logistic regression loss function, such as the cross-entropy loss, it helps to avoid issues like getting stuck in local minima during optimization. The gradient descent process in logistic regression is designed to minimize this specific loss function, which is better suited for classification tasks where we deal with probabilities and discrete outcomes.
+
 
 ![Screenshot](./Comparison.png){: width="400px"}
 
