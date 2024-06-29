@@ -63,4 +63,4 @@ $$
 - **Why is the logistic regression loss function different from the linear regression loss function?** <br>
 Because when we use previous cost function, there will exist many local minima which the gradient descent can be stuck at it.
 
-<img src="./Comparison.png" alt="image" width="300" height="auto">
+<img src="./Comparison.png" alt="image" width="500" height="auto">
