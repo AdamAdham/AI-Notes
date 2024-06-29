@@ -43,7 +43,7 @@ $$
 \vec{w}_j := \vec{w}_j - \alpha \frac{\partial J(\vec{w}, b)}{\partial \vec{w}}, \quad b := b - \alpha \frac{\partial J(\vec{w}, b)}{\partial b} \quad || \quad \alpha= \text {learning rate} \quad\quad j=1..n \text{ where n is number of features}
 $$
 
-   - Repeat until convergence criteria are met.
+   - Repeat until convergence criteria are met. **Simultaneously**
 
 #### Derivitive
 
