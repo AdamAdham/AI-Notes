@@ -47,12 +47,6 @@ $$
 
 ### Loss Function
 
-- **Why is the logistic regression loss function different from the linear regression loss function?** <br>
-Because when we use previous cost function, there will exist many local minima which the gradient descent can be stuck at it.
-
-
-![Screenshot](./Comparison.png){width=400px}
-
 $$
 L(h_{\vec{w}, b}(\vec{x}^{(i)}), 1) = -\log(h_{\vec{w}, b}(\vec{x}^{(i)})) \quad\quad || \quad\quad \ y^{(i)} = 1
 $$
@@ -66,3 +60,7 @@ L(h_{\vec{w}, b}(\vec{x}^{(i)}), y^{(i)}) = -y^{(i)} \log(h_{\vec{w}, b}(\vec{x}
 $$
 
 
+- **Why is the logistic regression loss function different from the linear regression loss function?** <br>
+Because when we use previous cost function, there will exist many local minima which the gradient descent can be stuck at it.
+
+<img src="./Comparison.png" alt="image" width="300" height="auto">
