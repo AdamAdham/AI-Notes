@@ -61,7 +61,7 @@ $$
 L(h_{\vec{w}, b}(\vec{x}^{(i)}), y^{(i)}) = -y^{(i)} \log(h_{\vec{w}, b}(\vec{x}^{(i)})) - (1 - y^{(i)}) \log(1 - h_{\vec{w}, b}(\vec{x}^{(i)}))
 $$
 
-
+Derivation is from principle called maximum likelyhood estimation
 - **Why is the logistic regression loss function different from the linear regression loss function?** <br>
 Because when we use previous cost function, there will exist many local minima which the gradient descent can be stuck at it.
 
