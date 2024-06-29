@@ -40,7 +40,7 @@ $$
 ### Gradient Descent
 
 $$
-     \vec{w} := \vec{w} - \alpha \frac{\partial J(\vec{w}, b)}{\partial \vec{w}}, \quad b := b - \alpha \frac{\partial J(\vec{w}, b)}{\partial b} \quad || \quad \alpha= \text {learning rate}
+     \vec{w}_{j} := \vec{w} - \alpha \frac{\partial J(\vec{w}, b)}{\partial \vec{w}}, \quad b := b - \alpha \frac{\partial J(\vec{w}, b)}{\partial b} \quad || \quad \alpha= \text {learning rate} \quad\quad j=1..n \text{where n is number of features} 
 $$
    - Repeat until convergence criteria are met.
 
@@ -48,6 +48,10 @@ $$
 
 $$
 \frac{\partial J(\vec{w}, b)}{\partial \vec{w}} = \frac{1}{m} \sum_{i=1}^{m} \left(f_{\vec{w}, b}(\vec{x}^{(i)}) - y^{(i)} \right)x^{(i)}
+$$
+
+$$
+\frac{\partial J(\vec{w}, b)}{\partial b} = 
 $$
 
 # Logistic Regression
