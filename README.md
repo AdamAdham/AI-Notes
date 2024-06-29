@@ -20,12 +20,14 @@ $$
 
 ### Loss Function
 How well you are doing on **one** training example
+
 $$
 L(f_{\vec{w}, b}(\vec{x}^{(i)}),y^{(i)}) = f_{\vec{w}, b}(\vec{x}^{(i)}) - y^{(i)}
 $$
 
 
 ### Squared Cost Function
+How well you are doing on **all** the training examples
 
 $$
 J(\vec{w}, b) = \frac{1}{2m} \sum_{i=1}^{m} \left(f_{\vec{w}, b}(\vec{x}^{(i)}) - y^{(i)} \right)^2 
