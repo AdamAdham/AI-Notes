@@ -12,7 +12,7 @@ $$
 ### Loss
 
 $$
-L(f_{\vec{w}, b}(\vec{x}^{(i)},y^{(i)}) = f_{\vec{w}, b}(\vec{x}^{(i)}) - y^{(i)}
+L(f_{\vec{w}, b}(\vec{x}^{(i)}),y^{(i)}) = f_{\vec{w}, b}(\vec{x}^{(i)}) - y^{(i)}
 $$
 
 
