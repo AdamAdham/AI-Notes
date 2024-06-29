@@ -48,13 +48,11 @@ $$
 ## Loss Function
 
 $$
-L(h_{\vec{w}, b}(\vec{x}^{(i)}), 1) = -\log(h_{\vec{w}, b}(\vec{x}^{(i)})) \quad || \( y^{(i)} = 1 \)
+L(h_{\vec{w}, b}(\vec{x}^{(i)}), 1) = -\log(h_{\vec{w}, b}(\vec{x}^{(i)})) \quad ||  \ y^{(i)} = 1
 $$
 
-### For \( y^{(i)} = 0 \)
-
 $$
-L(h_{\vec{w}, b}(\vec{x}^{(i)}), 0) = -\log(1 - h_{\vec{w}, b}(\vec{x}^{(i)})) \quad || \( y^{(i)} = 0 \)
+L(h_{\vec{w}, b}(\vec{x}^{(i)}), 0) = -\log(1 - h_{\vec{w}, b}(\vec{x}^{(i)})) \quad ||  y^{(i)} = 0
 $$
 
 
