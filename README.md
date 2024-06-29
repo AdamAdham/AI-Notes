@@ -4,11 +4,11 @@
 
 # Definitions
 $$
-\vec{x}^{(i)} = inputs for result set i
+\vec{x}^{(i)} = \text{inputs for result set } i
 $$
 
 $$
-y^{(i) = value of result set i
+y^{(i)} = \text{value of result set } i
 $$
 
 # Linear Regression
