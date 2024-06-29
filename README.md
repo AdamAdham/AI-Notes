@@ -41,7 +41,6 @@ $$
 
 $$
      \vec{w} := \vec{w} - \alpha \frac{\partial J(\vec{w}, b)}{\partial \vec{w}}, \quad b := b - \alpha \frac{\partial J(\vec{w}, b)}{\partial b} \quad || \quad \alpha= \text {learning rate}
-     \]
 $$
    - Repeat until convergence criteria are met.
 
