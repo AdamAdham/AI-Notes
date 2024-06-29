@@ -19,7 +19,7 @@ f_{\vec{w}, b}(\vec{x}^{(i)} = \vec{w} \cdot \vec{x}^{(i)} + b
 $$
 
 ### Loss Function
-
+How well you are doing on **one** training example
 $$
 L(f_{\vec{w}, b}(\vec{x}^{(i)}),y^{(i)}) = f_{\vec{w}, b}(\vec{x}^{(i)}) - y^{(i)}
 $$
