@@ -40,6 +40,7 @@ $$
 ### Gradient Descent
 
 1. **Initialize Parameters**: Choose initial values for
+
 $$
 \( \vec{w} \) and \( b \).
 $$
