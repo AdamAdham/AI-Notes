@@ -52,7 +52,7 @@ $$
 $$
 
 $$
-\frac{\partial J(\vec{w}, b)}{\partial b} = 
+\frac{\partial J(\vec{w}, b)}{\partial b} = \frac{1}{m} \sum_{i=1}^{m} \left(f_{\vec{w}, b}(\vec{x}^{(i)}) - y^{(i)} \right)
 $$
 
 # Logistic Regression
