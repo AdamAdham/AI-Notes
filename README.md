@@ -44,7 +44,7 @@ $$
 $$
 
 $$
-\[ \vec{w}_j := \vec{w}_j \]
+\vec{w}_j := \vec{w}_j \
 $$
 
    - Repeat until convergence criteria are met.
