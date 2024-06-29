@@ -49,8 +49,6 @@ $$
 
 # Logistic Loss Function for Individual Labels
 
-# Logistic Loss Function for Individual Labels
-
 ### For \( y^{(i)} = 1 \)
 
 $$
