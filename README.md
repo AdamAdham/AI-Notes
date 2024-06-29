@@ -39,14 +39,16 @@ $$
 
 # Logistic Regression
 
-- Sigmoid Function:
+### Sigmoid Function:
 
 $$
 g(z) = \frac{1}{1+ e^{-z}} = g( \vec{w} . \vec{x} +b) = \frac{1}{1+ e^{-( \vec{w} . \vec{x} +b)}} \quad || \quad 0 < g(z) < 1
 $$
 
-## Loss Function
+### Loss Function
 
+Why different than linear regression loss funtion?
+Because 
 $$
 L(h_{\vec{w}, b}(\vec{x}^{(i)}), 1) = -\log(h_{\vec{w}, b}(\vec{x}^{(i)})) \quad\quad || \quad\quad \ y^{(i)} = 1
 $$
