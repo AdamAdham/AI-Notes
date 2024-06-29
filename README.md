@@ -66,6 +66,6 @@ $$
 Because when we use previous cost function, there will exist many local minima which the gradient descent can be stuck at it.
 
 <img src="./Comparison.png" alt="image" width="500" height="auto">
-<img src="./y-equal-1" alt="image" width="500" height="auto">
-<img src="./y-equal-0" alt="image" width="500" height="auto">
+<img src="./y-equal-1.png" alt="image" width="500" height="auto">
+<img src="./y-equal-0.png" alt="image" width="500" height="auto">
 
