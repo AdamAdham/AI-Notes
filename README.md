@@ -37,6 +37,24 @@ $$
 J(\vec{w}, b) = \frac{1}{2m} \sum_{i=1}^{m} \left(L(f_{\vec{w}, b}(\vec{x}^{(i)}),y^{(i)}) \right)^2 
 $$
 
+### Gradient Descent
+### Gradient Descent Algorithm
+
+1. **Initialize Parameters**: Choose initial values for \( \vec{w} \) and \( b \).
+   
+2. **Define the Learning Rate**: Select a learning rate \( \alpha \).
+
+3. **Iterate Until Convergence**:
+   - Compute gradients:
+     \[
+     \frac{\partial J(\vec{w}, b)}{\partial \vec{w}}, \quad \frac{\partial J(\vec{w}, b)}{\partial b}
+     \]
+   - Update parameters:
+     \[
+     \vec{w} := \vec{w} - \alpha \frac{\partial J(\vec{w}, b)}{\partial \vec{w}}, \quad b := b - \alpha \frac{\partial J(\vec{w}, b)}{\partial b}
+     \]
+   - Repeat until convergence criteria are met.
+
 
 
 # Logistic Regression
