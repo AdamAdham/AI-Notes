@@ -49,22 +49,19 @@ $$
 
 # Logistic Loss Function for Individual Labels
 
+# Logistic Loss Function for Individual Labels
+
 ### For \( y^{(i)} = 1 \)
 
-Inline: \( L(h_{\vec{w}, b}(\vec{x}^{(i)}), 1) = -\log(h_{\vec{w}, b}(\vec{x}^{(i)})) \)
-
-Display:
 $$
 L(h_{\vec{w}, b}(\vec{x}^{(i)}), 1) = -\log(h_{\vec{w}, b}(\vec{x}^{(i)}))
 $$
 
 ### For \( y^{(i)} = 0 \)
 
-Inline: \( L(h_{\vec{w}, b}(\vec{x}^{(i)}), 0) = -\log(1 - h_{\vec{w}, b}(\vec{x}^{(i)})) \)
-
-Display:
 $$
 L(h_{\vec{w}, b}(\vec{x}^{(i)}), 0) = -\log(1 - h_{\vec{w}, b}(\vec{x}^{(i)}))
 $$
+
 
 
