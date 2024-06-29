@@ -50,7 +50,7 @@ $$
 Why different than linear regression loss funtion?
 Because when we use previous cost function, there will exist many local minima which the gradient descent can be stuck at it
 
-![Screenshot](./screenshot.png){: width="400px"}
+![Screenshot](./screenshot (133).png){: width="400px"}
 
 $$
 L(h_{\vec{w}, b}(\vec{x}^{(i)}), 1) = -\log(h_{\vec{w}, b}(\vec{x}^{(i)})) \quad\quad || \quad\quad \ y^{(i)} = 1
