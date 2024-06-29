@@ -39,23 +39,10 @@ $$
 
 ### Gradient Descent
 
-1. **Initialize Parameters**: Choose initial values for
-
 $$
-\( \vec{w} \) and \( b \).
-$$
-   
-3. **Define the Learning Rate**: Select a learning rate \( \alpha \).
-
-4. **Iterate Until Convergence**:
-   - Compute gradients:
-     \[
-     \frac{\partial J(\vec{w}, b)}{\partial \vec{w}}, \quad \frac{\partial J(\vec{w}, b)}{\partial b}
-     \]
-   - Update parameters:
-     \[
      \vec{w} := \vec{w} - \alpha \frac{\partial J(\vec{w}, b)}{\partial \vec{w}}, \quad b := b - \alpha \frac{\partial J(\vec{w}, b)}{\partial b}
      \]
+$$
    - Repeat until convergence criteria are met.
 
 
