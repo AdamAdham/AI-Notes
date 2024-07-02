@@ -85,3 +85,10 @@ Because when we use previous cost function, there will exist many local minima w
 <img src="./y-equal-1.png" alt="image" width="500" height="auto">
 <img src="./y-equal-0.png" alt="image" width="500" height="auto">
 credit to Andrew Ng course of Stanford university.
+
+## Regularization
+Done to minimize **w** parameters to reduce overfitting by adding an extra term to the cost function
+
+$$
+J(\vec{w}, b) = \frac{1}{2m} \sum_{i=1}^{m} \left(f_{\vec{w}, b}(\vec{x}^{(i)}) - y^{(i)} \right)^2 + \frac{\lambda}{2} \sum_{j=1}^{n} w_j^2 \]
+$$
