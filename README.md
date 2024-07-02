@@ -104,5 +104,5 @@ $$
 ### Derivative
 
 $$
-\frac{\partial}{\partial w_j} \left( \frac{\lambda}{2} w_j^2 \right) = \lambda w_j
+\frac{\partial}{\partial w_j} \left( \frac{\lambda}{m} w_j^2 \right) = \lambda w_j
 $$
