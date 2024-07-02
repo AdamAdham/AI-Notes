@@ -104,5 +104,5 @@ $$
 ### Derivative
 
 $$
-\frac{\partial}{\partial w_j} \left( \frac{\lambda}{2m} w_j^2 \right) = \lambda w_j
+\frac{\partial}{\partial w_j} \left( \sum_{j=1}^{m}\frac{\lambda}{2m} w_j^2 \right) = \lambda w_j   \quad || \quad m=\text{number of features}
 $$
