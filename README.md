@@ -1,6 +1,6 @@
 # AI-Notes
 
-- Deep Learning = Neural Networks
+- Deep Learning = Neural Networks = Multilayer perceptron
 
 # Definitions
 $$
@@ -117,3 +117,7 @@ $$
 
 - **Layer** : Group of neurons
 - **Activations** : Output from the layer
+
+$$
+x^n \quad || \quad this is the variable x at layer n
+$$
