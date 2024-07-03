@@ -116,3 +116,4 @@ $$
 # Deep Learning
 
 - **Layer** : Group of neurons
+- **Activations** : Output from the layer
