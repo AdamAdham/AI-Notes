@@ -119,5 +119,5 @@ $$
 - **Activations** : Output from the layer
 
 $$
-x^n \quad || \quad \text{this is the variable x at layer n}
+x^n_m \quad || \quad \text{this is the variable x for neuron m at layer n}
 $$
