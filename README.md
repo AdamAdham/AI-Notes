@@ -108,3 +108,11 @@ Because according to this Wj all other Ws are constant so are zeroed
 $$
 \frac{\partial}{\partial w_j} \left( \sum_{j=1}^{m}\frac{\lambda}{2m} w_j^2 \right) = \lambda w_j   \quad || \quad m=\text{number of features}
 $$
+
+### Gradient Descent
+
+$$
+\vec{w}_j := \vec{w}_j - \alpha \frac{\partial J(\vec{w}, b)}{\partial \vec{w}}, \quad b := b - \alpha \frac{\partial J(\vec{w}, b)}{\partial b}
+$$
+
+   - Repeat until convergence criteria are met. **Simultaneously**
