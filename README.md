@@ -235,8 +235,8 @@ $$ \mathbf{a} \cdot \mathbf{b} = \sum_{i=1}^{n} (a_i \cdot b_i) $$
 Where $$\(\mathbf{a}\) and \(\mathbf{b}\) are vectors of length \(n\)$$.
 
 Example:
-* \(\mathbf{a} = [a_1, a_2, a_3]\)
-* \(\mathbf{b} = [b_1, b_2, b_3]\)
+* $\(\mathbf{a} = [a_1, a_2, a_3]\)$
+* $\(\mathbf{b} = [b_1, b_2, b_3]\)$
 
 The dot product \(\mathbf{a} \cdot \mathbf{b}\) is given by:
 
