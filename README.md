@@ -284,9 +284,7 @@ $$
 
 $$
 \mathbf{b} = \begin{bmatrix}
-b_1 \\
-b_2 \\
-b_3
+b_1 \\b_2 \\b_3
 \end{bmatrix}
 $$
 
