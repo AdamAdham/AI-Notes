@@ -265,3 +265,16 @@ $$
 3 & 6
 \end{bmatrix}\
 $$
+
+#### Note
+
+The dot product (also known as the scalar product) of two vectors can be expressed as the transpose of the first vector multiplied by the second vector. For vectors \(\mathbf{a}\) and \(\mathbf{b}\), it is defined as:
+
+$$ \mathbf{a} \cdot \mathbf{b} = \mathbf{a}^T \mathbf{b} $$
+
+Where:
+- $\(\mathbf{a}^T\)$ denotes the transpose of vector $\(\mathbf{a}\)$.
+
+Example:
+* If $\(\mathbf{a} = [a_1, a_2, a_3]\)$ and $\(\mathbf{b} = [b_1, b_2, b_3]\)$,
+* Then $\(\mathbf{a} \cdot \mathbf{b} = \begin{bmatrix} a_1 & a_2 & a_3 \end{bmatrix} \begin{bmatrix} b_1 \\ b_2 \\ b_3 \end{bmatrix} = a_1 b_1 + a_2 b_2 + a_3 b_3 \)$.
