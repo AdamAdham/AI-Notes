@@ -136,6 +136,7 @@ x= np.array([200,17])        # 1D vector/array
 
 - **Dense**: Type of layer
 
+Without Vectorization
 ```python
 # Simplified implementation
 def dense (a_in, W, b):
@@ -146,6 +147,17 @@ for j in range(units): 0,1,2
    z = np.dot (w,a_in) + b[j]
    a_out [j] = g(z)
 return a_out
+```
+Vectorization
+```python
+X = np.array([[200, 17]]) # 1x2 Made into 2D
+W = np.array([[1, -3, 5],
+               [-2, 4, 6]])
+B = np.array([[-1, 1, 2]]) # 1x3 Made into 2D
+def dense (A_in, W, B):
+   Z = np. matmul (A_in, W) + B # matmul =  matrix multiplication
+   A_out = g(Z)
+   return A_out
 ```
 
 ``` python
@@ -211,3 +223,37 @@ yhat = 0
 - Using 2D arrays not 1D even if row/column vector (due to tensorflow being developed for extremely large data sets)
 - Lowercase vars = Scalar/Vectors
 - Uppercase vars = Matrix
+
+## Linear Algebra
+
+#### Dot Product
+The dot product (also known as the scalar product) of two vectors is an algebraic operation that takes two equal-length sequences of numbers (usually coordinate vectors) and returns a single number. The dot product of vectors *a* and *b* is defined as:
+
+*a* · *b* = Σ (a_i * b_i) for i = 1 to n
+
+Where *a* and *b* are vectors of length *n*.
+
+Example:
+* *a* = [a1, a2, a3]
+* *b* = [b1, b2, b3]
+
+The dot product *a* · *b* = a1*b1 + a2*b2 + a3*b3.
+
+#### Transpose
+The transpose of a matrix is an operation that flips a matrix over its diagonal, switching the row and column indices of the matrix. The transpose of matrix *A* is denoted as *A^T*.
+
+If *A* is an m × n matrix, then the transpose *A^T* is an n × m matrix.
+
+Example:
+* If *A* = 
+    ```
+    [1, 2, 3]
+    [4, 5, 6]
+    ```
+* Then *A^T* =
+    ```
+    [1, 4]
+    [2, 5]
+    [3, 6]
+    ```
+
