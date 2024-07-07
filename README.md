@@ -333,7 +333,10 @@ $$
 2. **Setup the Resulting Matrix**: Determine the dimensions of $\(\mathbf{C}\)$, which will be $\(m \times p\)$ if $\(\mathbf{A}\)$ is $\(m \times n\)$ and $\(\mathbf{B}\)$ is $\(n \times p\)$.
 
 3. **Compute Each Element of** $\(\mathbf{C}\)$:
-4. $\(c_{ij} = \sum_{k=1}^{n} a_{ik} \cdot b_{kj}\)$
+
+$$
+\(c_{ij} = \sum_{k=1}^{n} a_{ik} \cdot b_{kj}\)
+$$
 
 5. **Repeat for Each Element**: Compute each element $\(c_{ij}\)$ by iterating over all possible values of $\(k\)$ from 1 to $\(n\)$.
 
