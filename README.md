@@ -148,6 +148,17 @@ a1.numpy()
 
 - **Sequential**: A framework that strings together layers to create a neural network <br>
 *predict()*: Carries out forward propagation to output the expected values
+
+```python
+def sequential(x):
+   a1 = dense (x, W1, b1)
+   a2 = dense (a1, W2, b2)
+   a3 = dense (a2, W3, b3)
+   a4 = dense (a3, W4, b4)
+   f_x = a4
+   return f_x
+```
+
 ```python
 model Sequential([
 Dense (units=3, activation="sigmoid"),
@@ -166,6 +177,18 @@ model.predict(x_new) <
 ### Init Layers Basics
 
 - **Dense**: Type of layer
+
+```python
+# Simplified implementation
+def dense (a_in, W, b):
+units = W.shape[1] # Getting number of cols = number of outputs from layer
+a_out = np.zeros(units)
+for j in range(units): 0,1,2
+   W = W[:, j]
+   z = np.dot (w,a_in) + b[j]
+   a_out [j] = g(z)
+return a_out
+```
 
 ``` python
 x = np.array([[0.0,... 245,...240...0]])
@@ -188,3 +211,5 @@ yhat = 0
 
 ### Convention
 - Using 2D arrays not 1D even if row/column vector (due to tensorflow being developed for extremely large data sets)
+- Lowercase vars = Scalar/Vectors
+- Uppercase vars = Matrix
