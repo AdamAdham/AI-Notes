@@ -286,3 +286,18 @@ b_3
 \end{bmatrix} = a_1 b_1 + a_2 b_2 + a_3 b_3 
 $$
 
+### Matrix Multiplication
+$$
+\mathbf{A} = 
+\begin{bmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6
+\end{bmatrix}\
+\mathbf{A}^T = 
+\begin{bmatrix}
+1 & 4 \\
+2 & 5 \\
+3 & 6
+\end{bmatrix}\
+$$
+
