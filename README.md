@@ -115,9 +115,29 @@ $$
 
 # Deep Learning
 
-- **Layer** : Group of neurons
+- **Layer** : Group of neurons/units
+- **Unit** : A processes the input and produces output
 - **Activations** : Output from the layer
 
 $$
 x^n_m \quad || \quad \text{this is the variable x for neuron m at layer n}
 $$
+
+### Init Layers Basics
+
+``` python
+x = np.array([[0.0,... 245,...240...0]])
+# Dense is a type of layer
+layer_1 = Dense (units=25, activation= 'sigmoid') 
+a1 = layer_1(x)
+
+layer_2 = Dense (units=15, activation= 'sigmoid')
+a2 = layer_2(a1)
+layer 3 = Dense (units=1, activation=ʻsigmoid')
+
+a3 = layer_3(a2)
+if a3 >= 0.5:
+yhat = 1
+else:
+yhat = 0
+```
