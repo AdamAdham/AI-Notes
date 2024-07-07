@@ -287,6 +287,14 @@ b_3
 $$
 
 ### Matrix Multiplication
+$$
+\mathbf{A = r1 x c1}
+\quad \quad
+\mathbf{B = r2 x c2}
+\text{for AB to multiply c1=r2}
+$$
+
+
 
 $$
 \mathbf{A} = 
@@ -294,9 +302,7 @@ $$
 1 & 2 & 3 \\
 4 & 5 & 6
 \end{bmatrix}
-$$
-
-$$
+\quad \quad
 \mathbf{B} = 
 \begin{bmatrix}
 1 & 4 \\
@@ -304,5 +310,11 @@ $$
 3 & 6
 \end{bmatrix}
 $$
+
+$$
+mathbf{2x3} \quad \quad \quad mathbf{3x2} 
+$$
+
+
 
 
