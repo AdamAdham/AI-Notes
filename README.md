@@ -287,6 +287,7 @@ b_3
 $$
 
 ### Matrix Multiplication
+
 $$
 \mathbf{A} = 
 \begin{bmatrix}
