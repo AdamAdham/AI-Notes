@@ -243,9 +243,9 @@ The dot product \(\mathbf{a} \cdot \mathbf{b}\) is given by:
 $$ a_1 \cdot b_1 + a_2 \cdot b_2 + a_3 \cdot b_3 $$
 
 #### Transpose
-The transpose of a matrix is an operation that flips a matrix over its diagonal, switching the row and column indices of the matrix. The transpose of matrix \(\mathbf{A}\) is denoted as \(\mathbf{A}^T\).
+The transpose of a matrix is an operation that flips a matrix over its diagonal, switching the row and column indices of the matrix. The transpose of matrix $\(\mathbf{A}\)$ is denoted as $\(\mathbf{A}^T\)$.
 
-If $\(\mathbf{A}\)$ is an \(m \times n\) matrix, then the transpose \(\mathbf{A}^T\) is an \(n \times m\) matrix.
+If $\(\mathbf{A}\)$ is an $\(m \times n\)$ matrix, then the transpose $\(\mathbf{A}^T\)$ is an $\(n \times m\)$ matrix.
 
 Example:
 
