@@ -133,11 +133,39 @@ x = np.array([[200], [209]]) # 2x1 column vector
 x= np.array([200,17])        # 1D vector/array
 ```
 
-### Init Layers Basics
+- **Dense**: Type of layer
 
 ``` python
 x = np.array([[0.0,... 245,...240...0]])
-# Dense is a type of layer
+layer_1 = Dense (units=25, activation= 'sigmoid') 
+a1 = layer_1(x)
+# a1 --> tf.Tensor([[0.2 0.7 0.3]], shape=(1, 3), dtype=float32)
+a1.numpy()
+# a1 --> array([[0.2, 0.7, 0.3]], dtype=float32)
+```
+
+- **Sequential**: A framework that strings together layers to create a neural network
+- *predict()*: Carries out forward propagation to output the expected values
+```python
+layer 1 Dense (units=3, activation="sigmoid")
+layer_2 = Dense (units=1, activation="sigmoid")
+model = Sequential([layer_1, layer_2])
+x = np.array([[200.0, 17.0],
+[120.0, 5.0], 4 x 2
+[425.0, 20.0],
+[212.0, 18.0]])
+y = np.array([1,0,0,1])
+model.compile(...) more about this next week
+model.fit(x,y)
+model.predict(x_new) <
+```
+
+### Init Layers Basics
+
+- **Dense**: Type of layer
+
+``` python
+x = np.array([[0.0,... 245,...240...0]])
 layer_1 = Dense (units=25, activation= 'sigmoid') 
 a1 = layer_1(x)
 # a1 --> tf.Tensor([[0.2 0.7 0.3]], shape=(1, 3), dtype=float32)
