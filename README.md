@@ -225,35 +225,36 @@ yhat = 0
 - Uppercase vars = Matrix
 
 ## Linear Algebra
+\### Linear Algebra Basics
 
 #### Dot Product
-The dot product (also known as the scalar product) of two vectors is an algebraic operation that takes two equal-length sequences of numbers (usually coordinate vectors) and returns a single number. The dot product of vectors *a* and *b* is defined as:
+The dot product (also known as the scalar product) of two vectors is an algebraic operation that takes two equal-length sequences of numbers (usually coordinate vectors) and returns a single number. The dot product of vectors \(\mathbf{a}\) and \(\mathbf{b}\) is defined as:
 
-*a* · *b* = Σ (a_i * b_i) for i = 1 to n
+\[ \mathbf{a} \cdot \mathbf{b} = \sum_{i=1}^{n} (a_i \cdot b_i) \]
 
-Where *a* and *b* are vectors of length *n*.
+Where \(\mathbf{a}\) and \(\mathbf{b}\) are vectors of length \(n\).
 
 Example:
-* *a* = [a1, a2, a3]
-* *b* = [b1, b2, b3]
+* \(\mathbf{a} = [a_1, a_2, a_3]\)
+* \(\mathbf{b} = [b_1, b_2, b_3]\)
 
-The dot product *a* · *b* = a1*b1 + a2*b2 + a3*b3.
+The dot product \(\mathbf{a} \cdot \mathbf{b} = a_1 \cdot b_1 + a_2 \cdot b_2 + a_3 \cdot b_3\).
 
 #### Transpose
-The transpose of a matrix is an operation that flips a matrix over its diagonal, switching the row and column indices of the matrix. The transpose of matrix *A* is denoted as *A^T*.
+The transpose of a matrix is an operation that flips a matrix over its diagonal, switching the row and column indices of the matrix. The transpose of matrix \(\mathbf{A}\) is denoted as \(\mathbf{A}^T\).
 
-If *A* is an m × n matrix, then the transpose *A^T* is an n × m matrix.
+If \(\mathbf{A}\) is an \(m \times n\) matrix, then the transpose \(\mathbf{A}^T\) is an \(n \times m\) matrix.
 
 Example:
-* If *A* = 
-    ```
-    [1, 2, 3]
-    [4, 5, 6]
-    ```
-* Then *A^T* =
-    ```
-    [1, 4]
-    [2, 5]
-    [3, 6]
-    ```
+* If \(\mathbf{A} = 
+    \begin{bmatrix}
+    1 & 2 & 3 \\
+    4 & 5 & 6
+    \end{bmatrix}\)
+* Then \(\mathbf{A}^T = 
+    \begin{bmatrix}
+    1 & 4 \\
+    2 & 5 \\
+    3 & 6
+    \end{bmatrix}\)
 
