@@ -136,6 +136,18 @@ x= np.array([200,17])        # 1D vector/array
 
 - **Dense**: Type of layer
 
+```python
+# Simplified implementation
+def dense (a_in, W, b):
+units = W.shape[1] # Getting number of cols = number of outputs from layer
+a_out = np.zeros(units)
+for j in range(units): 0,1,2
+   W = W[:, j]
+   z = np.dot (w,a_in) + b[j]
+   a_out [j] = g(z)
+return a_out
+```
+
 ``` python
 x = np.array([[0.0,... 245,...240...0]])
 layer_1 = Dense (units=25, activation= 'sigmoid') 
@@ -175,20 +187,6 @@ model.predict(x_new) <
 <br>
 
 ### Init Layers Basics
-
-- **Dense**: Type of layer
-
-```python
-# Simplified implementation
-def dense (a_in, W, b):
-units = W.shape[1] # Getting number of cols = number of outputs from layer
-a_out = np.zeros(units)
-for j in range(units): 0,1,2
-   W = W[:, j]
-   z = np.dot (w,a_in) + b[j]
-   a_out [j] = g(z)
-return a_out
-```
 
 ``` python
 x = np.array([[0.0,... 245,...240...0]])
