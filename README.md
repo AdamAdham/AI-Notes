@@ -302,6 +302,13 @@ $$
 
 6. **Write Out the Resulting Matrix** $C$: Assemble all computed elements into the resulting matrix $C$.
 
+
+$$
+C = \begin{bmatrix}
+\vec(A_1).\vec(B_1)
+\end{bmatrix}
+$$
+
 #### Example:
 
 $$
