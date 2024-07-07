@@ -132,6 +132,7 @@ x = np.array([[200, 17]])    # 1x2 row vector
 x = np.array([[200], [209]]) # 2x1 column vector
 x= np.array([200,17])        # 1D vector/array
 ```
+<br>
 
 - **Dense**: Type of layer
 
@@ -143,7 +144,9 @@ a1 = layer_1(x)
 a1.numpy()
 # a1 --> array([[0.2, 0.7, 0.3]], dtype=float32)
 ```
-#### Sequential: A framework that strings together layers to create a neural network <br>
+<br>
+
+**Sequential**: A framework that strings together layers to create a neural network <br>
 *predict()*: Carries out forward propagation to output the expected values
 ```python
 layer 1 Dense (units=3, activation="sigmoid")
@@ -158,6 +161,7 @@ model.compile(...) more about this next week
 model.fit(x,y)
 model.predict(x_new) <
 ```
+<br>
 
 ### Init Layers Basics
 
