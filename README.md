@@ -295,10 +295,10 @@ $$
 3. **Compute Each Element of** $\(\mathbf{C}\)$:
 
 $$
-c_{ij} = \sum_{k=1}^{n} A_{ik} \cdot B_{kj}\
+C_{ij} = \sum_{k=1}^{n} A_{ik} \cdot B_{kj}\
 $$
 
-5. **Repeat for Each Element**: Compute each element $\(c_{ij}\)$ by iterating over all possible values of $\(k\)$ from 1 to $\(n\)$.
+5. **Repeat for Each Element**: Compute each element $\(C_{ij}\)$ by iterating over all possible values of $\(k\)$ from 1 to $\(n\)$.
 
 6. **Write Out the Resulting Matrix** $\(\mathbf{C}\)$: Assemble all computed elements into the resulting matrix $\(\mathbf{C}\)$.
 
