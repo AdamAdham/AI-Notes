@@ -292,8 +292,8 @@ $$
 \begin{bmatrix}
 1 & 2 & 3 \\
 4 & 5 & 6
-\end{bmatrix}\
-\mathbf{A}^T = 
+\end{bmatrix}\ \\
+\mathbf{B = 
 \begin{bmatrix}
 1 & 4 \\
 2 & 5 \\
