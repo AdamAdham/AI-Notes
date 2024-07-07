@@ -225,9 +225,8 @@ yhat = 0
 - Uppercase vars = Matrix
 
 ## Linear Algebra
-### Linear Algebra Basics
 
-#### Dot Product
+### Dot Product
 The dot product (also known as the scalar product) of two vectors is an algebraic operation that takes two equal-length sequences of numbers (usually coordinate vectors) and returns a single number. The dot product of vectors \(\mathbf{a}\) and \(\mathbf{b}\) is defined as:
 
 $$ \mathbf{a} \cdot \mathbf{b} = \sum_{i=1}^{n} (a_i \cdot b_i) $$
@@ -242,7 +241,7 @@ The dot product $\(\mathbf{a} \cdot \mathbf{b}\)$ is given by:
 
 $$ a_1 \cdot b_1 + a_2 \cdot b_2 + a_3 \cdot b_3 $$
 
-#### Transpose
+### Transpose
 The transpose of a matrix is an operation that flips a matrix over its diagonal, switching the row and column indices of the matrix. The transpose of matrix $\(\mathbf{A}\)$ is denoted as $\(\mathbf{A}^T\)$.
 
 If $\(\mathbf{A}\)$ is an $\(m \times n\)$ matrix, then the transpose $\(\mathbf{A}^T\)$ is an $\(n \times m\)$ matrix.
@@ -266,7 +265,7 @@ $$
 \end{bmatrix}\
 $$
 
-#### Note
+### Note
 
 The dot product (also known as the scalar product) of two vectors can be expressed as the transpose of the first vector multiplied by the second vector. For vectors \(\mathbf{a}\) and \(\mathbf{b}\), it is defined as:
 
@@ -275,8 +274,8 @@ $$ \mathbf{a} \cdot \mathbf{b} = \mathbf{a}^T \mathbf{b} $$
 Where:
 - $\(\mathbf{a}^T\)$ denotes the transpose of vector $\(\mathbf{a}\)$.
 
-Example:
-If $\(\mathbf{a} = [a_1, a_2, a_3]\)$ and $\(\mathbf{b} = [b_1, b_2, b_3]\)$,
+#### Example:
+If $\(\mathbf{a} = [a_1, a_2, a_3]\)$ and $\(\mathbf{b} = [b_1, b_2, b_3]\)$, <br>
 Then $
 \(\mathbf{a} \cdot \mathbf{b} = \begin{bmatrix} a_1 & a_2 & a_3 \end{bmatrix} \begin{bmatrix} b_1 \\ b_2 \\ b_3 \end{bmatrix} = a_1 b_1 + a_2 b_2 + a_3 b_3 \)
 $
