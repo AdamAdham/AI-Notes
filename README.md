@@ -287,14 +287,13 @@ b_3
 $$
 
 ### Matrix Multiplication
+
+For AB matrix multiplication to be valid we have **c1=r2**
 $$
 \mathbf{A = r1 x c1}
 \quad \quad
 \mathbf{B = r2 x c2}
-\text{for AB to multiply c1=r2}
 $$
-
-
 
 $$
 \mathbf{A} = 
