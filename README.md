@@ -238,7 +238,7 @@ Example:
 * $\(\mathbf{a} = [a_1, a_2, a_3]\)$
 * $\(\mathbf{b} = [b_1, b_2, b_3]\)$
 
-The dot product \(\mathbf{a} \cdot \mathbf{b}\) is given by:
+The dot product $\(\mathbf{a} \cdot \mathbf{b}\)$ is given by:
 
 $$ a_1 \cdot b_1 + a_2 \cdot b_2 + a_3 \cdot b_3 $$
 
