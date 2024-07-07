@@ -146,12 +146,12 @@ a1.numpy()
 ```
 <br>
 
-**Sequential**: A framework that strings together layers to create a neural network <br>
+- **Sequential**: A framework that strings together layers to create a neural network <br>
 *predict()*: Carries out forward propagation to output the expected values
 ```python
-layer 1 Dense (units=3, activation="sigmoid")
-layer_2 = Dense (units=1, activation="sigmoid")
-model = Sequential([layer_1, layer_2])
+model Sequential([
+Dense (units=3, activation="sigmoid"),
+Dense (units=1, activation="sigmoid")])
 x = np.array([[200.0, 17.0],
 [120.0, 5.0], 4 x 2
 [425.0, 20.0],
