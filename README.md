@@ -232,7 +232,7 @@ The dot product (also known as the scalar product) of two vectors is an algebrai
 
 $$ \mathbf{a} \cdot \mathbf{b} = \sum_{i=1}^{n} (a_i \cdot b_i) $$
 
-Where $\(\mathbf{a}\) and \(\mathbf{b}\) are vectors of length \(n\)$.
+Where $\(\mathbf{a}\)$ and $\(\mathbf{b}\)$ are vectors of length \(n\).
 
 Example:
 * $\(\mathbf{a} = [a_1, a_2, a_3]\)$
