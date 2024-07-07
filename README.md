@@ -225,7 +225,6 @@ yhat = 0
 - Uppercase vars = Matrix
 
 ## Linear Algebra
-\### Linear Algebra Basics
 
 #### Dot Product
 The dot product (also known as the scalar product) of two vectors is an algebraic operation that takes two equal-length sequences of numbers (usually coordinate vectors) and returns a single number. The dot product of vectors \(\mathbf{a}\) and \(\mathbf{b}\) is defined as:
