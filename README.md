@@ -144,7 +144,7 @@ a1.numpy()
 # a1 --> array([[0.2, 0.7, 0.3]], dtype=float32)
 ```
 
-- **Sequential**: A framework that strings together layers to create a neural network
+- **Sequential**: A framework that strings together layers to create a neural network <br>
 *predict()*: Carries out forward propagation to output the expected values
 ```python
 layer 1 Dense (units=3, activation="sigmoid")
