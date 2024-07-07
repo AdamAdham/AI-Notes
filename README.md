@@ -307,15 +307,27 @@ $$
 \quad \quad
 \mathbf{B} = 
 \begin{bmatrix}
-1 & 4 \\
-2 & 5 \\
-3 & 6
+7 & 8 \\
+9 & 10 \\
+11 & 12
 \end{bmatrix}
 $$
 
 $$
 \quad \quad \quad [2x3] \quad \quad \quad \quad \quad \quad [3x2]
 $$
+
+$$
+\[
+\mathbf{A} \times \mathbf{B} = 
+\begin{bmatrix}
+1 \cdot 7 + 2 \cdot 9 + 3 \cdot 11 & 1 \cdot 8 + 2 \cdot 10 + 3 \cdot 12 \\
+4 \cdot 7 + 5 \cdot 9 + 6 \cdot 11 & 4 \cdot 8 + 5 \cdot 10 + 6 \cdot 12
+\end{bmatrix}
+\]
+$$
+
+
 
 
 
