@@ -275,7 +275,7 @@ Where:
 - $\(\mathbf{a}^T\)$ denotes the transpose of vector $\(\mathbf{a}\)$.
 
 #### Example:
-If $\(\mathbf{a} = [a_1, a_2, a_3]\)$ and $\(\mathbf{b} = [b_1, b_2, b_3]\)$, <br>
+If $\mathbf{a} = [a_1, a_2, a_3]\)$ and $\(\mathbf{b} = [b_1, b_2, b_3]\$, <br>
 Then 
 
 $$
