@@ -326,6 +326,59 @@ $$
 \end{bmatrix}
 $$
 
+### Steps for Matrix Multiplication
+
+1. **Check Dimensions**: Ensure that the number of columns in \(\mathbf{A}\) matches the number of rows in \(\mathbf{B}\).
+
+2. **Setup the Resulting Matrix**: Determine the dimensions of \(\mathbf{C}\), which will be \(m \times p\) if \(\mathbf{A}\) is \(m \times n\) and \(\mathbf{B}\) is \(n \times p\).
+
+3. **Compute Each Element of \(\mathbf{C}\)**:
+   - \(c_{ij} = \sum_{k=1}^{n} a_{ik} \cdot b_{kj}\)
+
+4. **Repeat for Each Element**: Compute each element \(c_{ij}\) by iterating over all possible values of \(k\) from 1 to \(n\).
+
+5. **Write Out the Resulting Matrix \(\mathbf{C}\)**: Assemble all computed elements into the resulting matrix \(\mathbf{C}\).
+
+### Example
+
+Given matrices:
+
+$$
+\[ \mathbf{A} = 
+\begin{bmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6
+\end{bmatrix}
+\quad \text{and} \quad
+\mathbf{B} = 
+\begin{bmatrix}
+7 & 8 \\
+9 & 10 \\
+11 & 12
+\end{bmatrix}
+\]
+$$
+
+To find \(\mathbf{A} \times \mathbf{B}\):
+
+- Dimensions: \(\mathbf{A}\) is \(2 \times 3\) and \(\mathbf{B}\) is \(3 \times 2\).
+- Resulting matrix \(\mathbf{C}\) will be \(2 \times 2\).
+
+Compute each element of \(\mathbf{C}\):
+
+\[ c_{11} = 1 \cdot 7 + 2 \cdot 9 + 3 \cdot 11 = 58 \]
+\[ c_{12} = 1 \cdot 8 + 2 \cdot 10 + 3 \cdot 12 = 64 \]
+\[ c_{21} = 4 \cdot 7 + 5 \cdot 9 + 6 \cdot 11 = 139 \]
+\[ c_{22} = 4 \cdot 8 + 5 \cdot 10 + 6 \cdot 12 = 154 \]
+
+Therefore, the resulting matrix \(\mathbf{C}\) is:
+
+\[ \mathbf{C} = 
+\begin{bmatrix}
+58 & 64 \\
+139 & 154
+\end{bmatrix}
+\]
 
 
 
