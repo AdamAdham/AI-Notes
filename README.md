@@ -145,7 +145,7 @@ a1.numpy()
 ```
 
 - **Sequential**: A framework that strings together layers to create a neural network
-- *predict()*: Carries out forward propagation to output the expected values
+*predict()*: Carries out forward propagation to output the expected values
 ```python
 layer 1 Dense (units=3, activation="sigmoid")
 layer_2 = Dense (units=1, activation="sigmoid")
