@@ -332,12 +332,12 @@ $$
 
 2. **Setup the Resulting Matrix**: Determine the dimensions of $\(\mathbf{C}\)$, which will be $\(m \times p\)$ if $\(\mathbf{A}\)$ is $\(m \times n\)$ and $\(\mathbf{B}\)$ is $\(n \times p\)$.
 
-3. **Compute Each Element of ** $\(\mathbf{C}\)$:
-   - $\(c_{ij} = \sum_{k=1}^{n} a_{ik} \cdot b_{kj}\)$
+3. **Compute Each Element of** $\(\mathbf{C}\)$:
+4. $\(c_{ij} = \sum_{k=1}^{n} a_{ik} \cdot b_{kj}\)$
 
-4. **Repeat for Each Element**: Compute each element $\(c_{ij}\)$ by iterating over all possible values of $\(k\)$ from 1 to $\(n\)$.
+5. **Repeat for Each Element**: Compute each element $\(c_{ij}\)$ by iterating over all possible values of $\(k\)$ from 1 to $\(n\)$.
 
-5. **Write Out the Resulting Matrix** $\(\mathbf{C}\)$: Assemble all computed elements into the resulting matrix $\(\mathbf{C}\)$.
+6. **Write Out the Resulting Matrix** $\(\mathbf{C}\)$: Assemble all computed elements into the resulting matrix $\(\mathbf{C}\)$.
 
 ### Example
 
