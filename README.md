@@ -123,6 +123,16 @@ $$
 x^n_m \quad || \quad \text{this is the variable x for neuron m at layer n}
 $$
 
+## TensorFlow
+
+### Basics
+- Row x Column
+```python
+x = np.array([[200, 17]])    # 1x2 row vector
+x = np.array([[200], [209]]) # 2x1 column vector
+x= np.array([200,17])        # 1D vector/array
+```
+
 ### Init Layers Basics
 
 ``` python
@@ -130,6 +140,9 @@ x = np.array([[0.0,... 245,...240...0]])
 # Dense is a type of layer
 layer_1 = Dense (units=25, activation= 'sigmoid') 
 a1 = layer_1(x)
+# a1 --> tf.Tensor([[0.2 0.7 0.3]], shape=(1, 3), dtype=float32)
+a1.numpy()
+# a1 --> array([[0.2, 0.7, 0.3]], dtype=float32)
 
 layer_2 = Dense (units=15, activation= 'sigmoid')
 a2 = layer_2(a1)
@@ -141,3 +154,6 @@ yhat = 1
 else:
 yhat = 0
 ```
+
+### Convention
+- Using 2D arrays not 1D even if row/column vector (due to tensorflow being developed for extremely large data sets)
