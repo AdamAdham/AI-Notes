@@ -250,11 +250,11 @@ If \(\mathbf{A}\) is an \(m \times n\) matrix, then the transpose \(\mathbf{A}^T
 Example:
 * If
 $$
-\mathbf{A} = 
-\begin{bmatrix}
-1 & 2 & 3 \\
-4 & 5 & 6
-\end{bmatrix}
+\(\mathbf{A} = 
+    \begin{bmatrix}
+    1 & 2 & 3 \\
+    4 & 5 & 6
+    \end{bmatrix}\)
   $$
   
 * Then $$\(\mathbf{A}^T = 
