@@ -283,5 +283,10 @@ $$
 $$
 
 $$
-\begin{bmatrix} b_1 \\ b_2 \\ b_3 \end{bmatrix}
+\mathbf{b} = \begin{pmatrix}
+b_1 \\
+b_2 \\
+b_3
+\end{pmatrix}
 $$
+
