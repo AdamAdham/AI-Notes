@@ -249,6 +249,7 @@ If \(\mathbf{A}\) is an \(m \times n\) matrix, then the transpose \(\mathbf{A}^T
 
 Example:
 * If
+
 $$
 \(\mathbf{A} = 
     \begin{bmatrix}
