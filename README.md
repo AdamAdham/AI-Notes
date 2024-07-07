@@ -288,7 +288,7 @@ $$
 
 ### Matrix Multiplication
 
-1. **Check Dimensions**: Ensure that the number of columns in $\(\mathbf{A}\)$ matches the number of rows in $\(\mathbf{B}\)$.
+1. **Check Dimensions**: Ensure that the number of columns in $B$ matches the number of rows in $B$.
 
 2. **Setup the Resulting Matrix**: Determine the dimensions of $C$, which will be $m \times p$ if $A$ is $m \times n$ and $B$ is $n \times p$.
 
