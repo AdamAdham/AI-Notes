@@ -288,7 +288,7 @@ $$
 
 ### Matrix Multiplication
 
-$$
+$
 \mathbf{A} = 
 \begin{bmatrix}
 1 & 2 & 3 \\
@@ -301,5 +301,5 @@ $$
 2 & 5 \\
 3 & 6
 \end{bmatrix}
-$$
+$
 
