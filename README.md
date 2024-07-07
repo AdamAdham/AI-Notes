@@ -281,3 +281,7 @@ Then
 $$
 \(\mathbf{a} \cdot \mathbf{b} = \begin{bmatrix} a_1 & a_2 & a_3 \end{bmatrix} \begin{bmatrix} b_1 \\ b_2 \\ b_3 \end{bmatrix} = a_1 b_1 + a_2 b_2 + a_3 b_3 \)
 $$
+
+$$
+\begin{bmatrix} b_1 \\ b_2 \\ b_3 \end{bmatrix}
+$$
