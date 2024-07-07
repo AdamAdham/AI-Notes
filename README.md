@@ -305,7 +305,8 @@ $$
 
 $$
 C = \begin{bmatrix}
-\vec(A_1).\vec(B_1)
+\vec{A_1j}.\vec{B_i1} % \vec{A_1j}.\vec{B_i2}//
+\vec{A_2j}.\vec{B_i1} % \vec{A_2j}.\vec{B_i2}//
 \end{bmatrix}
 $$
 
