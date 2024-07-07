@@ -290,7 +290,7 @@ $$
 
 1. **Check Dimensions**: Ensure that the number of columns in $\(\mathbf{A}\)$ matches the number of rows in $\(\mathbf{B}\)$.
 
-2. **Setup the Resulting Matrix**: Determine the dimensions of $\(\mathbf{C}\)$, which will be $\(m \times p\)$ if $\(\mathbf{A}\)$ is $\(m \times n\)$ and $\(\mathbf{B}\)$ is $\(n \times p\)$.
+2. **Setup the Resulting Matrix**: Determine the dimensions of $\(\mathbf{C}\)$, which will be $\(m \times p\)$ if $\(\mathbf{A}\)$ is $m \times n$ and $\(\mathbf{B}\)$ is $n \times p$.
 
 3. **Compute Each Element of** $\(\mathbf{C}\)$:
 
@@ -298,9 +298,9 @@ $$
 C_{ij} = \sum_{k=1}^{n} A_{ik} \cdot B_{kj}\
 $$
 
-5. **Repeat for Each Element**: Compute each element $\C_{ij}\$ by iterating over all possible values of $k$ from 1 to $\(n\)$.
+5. **Repeat for Each Element**: Compute each element $C_{ij}\$ by iterating over all possible values of $k$ from 1 to $n$.
 
-6. **Write Out the Resulting Matrix** $\C$: Assemble all computed elements into the resulting matrix $\C$.
+6. **Write Out the Resulting Matrix** $C$: Assemble all computed elements into the resulting matrix $\C$.
 
 #### Example:
 
