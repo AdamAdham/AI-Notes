@@ -314,7 +314,7 @@ $$
 $$
 
 $$
-mathbf{2x3} \quad \quad \quad mathbf{3x2} 
+\quad [2x3] \quad \quad \quad \quad [3x2]
 $$
 
 
