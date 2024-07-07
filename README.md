@@ -248,6 +248,7 @@ The transpose of a matrix is an operation that flips a matrix over its diagonal,
 If \(\mathbf{A}\) is an \(m \times n\) matrix, then the transpose \(\mathbf{A}^T\) is an \(n \times m\) matrix.
 
 Example:
+
 $$
 \mathbf{A} = 
 \begin{bmatrix}
