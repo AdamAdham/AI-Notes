@@ -300,7 +300,7 @@ $$
 
 5. **Repeat for Each Element**: Compute each element $C_{ij}\$ by iterating over all possible values of $k$ from 1 to $n$.
 
-6. **Write Out the Resulting Matrix** $C$: Assemble all computed elements into the resulting matrix $\C$.
+6. **Write Out the Resulting Matrix** $C$: Assemble all computed elements into the resulting matrix $C$.
 
 #### Example:
 
