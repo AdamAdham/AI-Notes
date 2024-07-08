@@ -3,7 +3,7 @@
 # Definitions
 - Deep Learning = Neural Networks = Multilayer perceptron
 - Handwritten digit classification problem = Binary classification
-
+- **Variables**
 $$
 \vec{x}^{(i)} = \text{inputs for result set } i
 $$
