@@ -383,7 +383,14 @@ model.compile (loss= Mean SquaredError())
 [Gradient descent Algorithm](#gradient-descent) <br>
 TensorFlow uses **back propagation** to compute the partial derivitives
 
-## Functions
+## Activation Functions
+
+### Linear Function
+
+$$
+g(z) = z
+$$
+
 ### Sigmoid Function
 
 $$
