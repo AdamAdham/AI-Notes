@@ -341,3 +341,7 @@ $$
 4 \cdot 7 + 5 \cdot 9 + 6 \cdot 11 & 4 \cdot 8 + 5 \cdot 10 + 6 \cdot 12
 \end{bmatrix}
 $$
+
+## Building a model steps
+
+<img src="build model logistic vs neural network.png" alt="logistic regression vs neural network" width="500" height="auto">
