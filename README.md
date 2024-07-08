@@ -155,8 +155,9 @@ W = np.array([[1, -3, 5],
                [-2, 4, 6]])
 B = np.array([[-1, 1, 2]]) # 1x3 Made into 2D
 def dense (A_in, W, B):
+   # np. matmul (A_in, W) the same as A_in @ W
    Z = np. matmul (A_in, W) + B # matmul =  matrix multiplication
-   A_out = g(Z)
+   A_out = g(Z) # g() activation function
    return A_out
 ```
 
@@ -184,7 +185,8 @@ def sequential(x):
 ```
 
 ```python
-model Sequential([
+from tensorflow. keras.losses import BinaryCrossentropy
+model = Sequential([
 Dense (units=3, activation="sigmoid"),
 Dense (units=1, activation="sigmoid")])
 x = np.array([[200.0, 17.0],
@@ -192,9 +194,9 @@ x = np.array([[200.0, 17.0],
 [425.0, 20.0],
 [212.0, 18.0]])
 y = np.array([1,0,0,1])
-model.compile(...) more about this next week
-model.fit(x,y)
-model.predict(x_new) <
+model.compile (loss=BinaryCrossentropy()) # BinaryCrossentropy() is specified as the loss function
+model. fit (X, Y, epochs=100) # epochs is the number of steps in gradient descent
+model.predict(x_new)
 ```
 <br>
 
