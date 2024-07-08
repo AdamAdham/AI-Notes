@@ -1,9 +1,9 @@
 # AI-Notes
 
-- Deep Learning = Neural Networks = Multilayer perceptron
-- Handwritten digit  classification problem = Binary classification
-
 # Definitions
+- Deep Learning = Neural Networks = Multilayer perceptron
+- Handwritten digit classification problem = Binary classification
+
 $$
 \vec{x}^{(i)} = \text{inputs for result set } i
 $$
@@ -12,7 +12,7 @@ $$
 y^{(i)} = \text{value of result set } i
 $$
 
-Cross Entropy function
+- **Cross Entropy function**
 
 $$
 L(f(x), y) = -y \log(f(x)) - (1 - y) \log(1 - f(x))
