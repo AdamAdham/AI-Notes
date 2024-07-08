@@ -385,14 +385,18 @@ TensorFlow uses **back propagation** to compute the partial derivitives
 
 ## Functions
 ### Sigmoid Function
+
 $$
 g(z) = \frac{1}{1+ e^{-z}} = g( \vec{w} . \vec{x} +b) = \frac{1}{1+ e^{-( \vec{w} . \vec{x} +b)}} \quad || \quad 0 < g(z) < 1
 $$
-<img src="sigmoid function.png" alt="logistic regression vs neural network" width="500" height="auto">
+
+<img src="sigmoid function.png" alt="sigmoid function" width="500" height="auto">
 
 ### Relu Function
 **Rectified linear Unit function**
+
 $$
 g(z) = max(0,z)
 $$
-<img src="relu function.png" alt="logistic regression vs neural network" width="500" height="auto">
+
+<img src="relu function.png" alt="relu function" width="500" height="auto">
