@@ -4,6 +4,7 @@
 - Deep Learning = Neural Networks = Multilayer perceptron
 - Handwritten digit classification problem = Binary classification
 - **Variables**
+
 $$
 \vec{x}^{(i)} = \text{inputs for result set } i
 $$
@@ -45,7 +46,7 @@ J(\vec{w}, b) = \frac{1}{2m} \sum_{i=1}^{m} \left(L(f_{\vec{w}, b}(\vec{x}^{(i)}
 $$
 
 ### Gradient Descent
-
+\label{gradient-descent}
 $$
 \vec{w}_j := \vec{w}_j - \alpha \frac{\partial J(\vec{w}, b)}{\partial \vec{w}}, \quad b := b - \alpha \frac{\partial J(\vec{w}, b)}{\partial b} \quad || \quad \alpha= \text {learning rate} \quad\quad j=1..n \text{ where n is number of features}
 $$
@@ -367,3 +368,18 @@ Dense (units=1, activation='sigmoid')])
 
 ### 2. Loss and Cost Functions
 
+- **Binary Classification**
+```python
+from tensorflow. keras. losses import BinaryCrossentropy
+model.compile(loss= BinaryCrossentropy())
+```
+
+- **Linear Regression**
+```python
+from tensorflow. keras. losses import MeanSquaredError
+model.compile (loss= Mean SquaredError())
+```
+
+### Minimize Cost (Gradient descent)
+\hyperref[specific-line]{Algorithm}
+TensorFlow uses **back propagation** to compute the partial derivitives
