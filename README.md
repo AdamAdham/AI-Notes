@@ -391,14 +391,15 @@ $$
 g(z) = z
 $$
 
-<img src="linear graph.png" alt="sigmoid function" width="500" height="auto">
+<img src="linear graph.png" alt="sigmoid function" width="300" height="auto">
+
 ### Sigmoid Function
 
 $$
 g(z) = \frac{1}{1+ e^{-z}} = g( \vec{w} . \vec{x} +b) = \frac{1}{1+ e^{-( \vec{w} . \vec{x} +b)}} \quad || \quad 0 < g(z) < 1
 $$
 
-<img src="sigmoid function.png" alt="sigmoid function" width="500" height="auto">
+<img src="sigmoid function.png" alt="sigmoid function" width="300" height="auto">
 
 ### Relu Function
 **Rectified linear Unit function**
@@ -407,4 +408,4 @@ $$
 g(z) = max(0,z)
 $$
 
-<img src="relu graph.png" alt="relu function" width="500" height="auto">
+<img src="relu graph.png" alt="relu function" width="300" height="auto">
