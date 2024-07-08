@@ -1,6 +1,7 @@
 # AI-Notes
 
 - Deep Learning = Neural Networks = Multilayer perceptron
+- Handwritten digit  classification problem = Binary classification
 
 # Definitions
 $$
@@ -9,6 +10,11 @@ $$
 
 $$
 y^{(i)} = \text{value of result set } i
+$$
+
+Cross Entropy function
+$$
+L(f(x), y) = −ylog(f(x)) − (1 − y)log(1 − f(x)) 
 $$
 
 # Linear Regression
@@ -345,3 +351,18 @@ $$
 ## Building a model steps
 
 <img src="build model logistic vs neural network.png" alt="logistic regression vs neural network" width="500" height="auto">
+
+### 1. Create a Model
+Creating the structure of the model
+```python
+import tensorflow as tf
+from tensorflow. keras import Sequential
+from tensorflow. keras.layers import Dense
+model = Sequential ([
+Dense (units=25, activation='sigmoid'),
+Dense (units=15, activation='sigmoid′),
+Dense (units=1, activation='sigmoid')])
+```
+
+### 2. Loss and Cost Functions
+
