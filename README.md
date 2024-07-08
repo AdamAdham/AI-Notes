@@ -399,4 +399,4 @@ $$
 g(z) = max(0,z)
 $$
 
-<img src="relu function.png" alt="relu function" width="500" height="auto">
+<img src="relu graph" alt="relu function" width="500" height="auto">
