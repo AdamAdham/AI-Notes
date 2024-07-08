@@ -391,6 +391,7 @@ $$
 g(z) = z
 $$
 
+<img src="linear graph.png" alt="sigmoid function" width="500" height="auto">
 ### Sigmoid Function
 
 $$
