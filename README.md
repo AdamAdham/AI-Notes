@@ -380,5 +380,5 @@ model.compile (loss= Mean SquaredError())
 ```
 
 ### Minimize Cost (Gradient descent)
-[Algorithm](### Gradient Descent)
+[Algorithm](#gradient-descent)
 TensorFlow uses **back propagation** to compute the partial derivitives
