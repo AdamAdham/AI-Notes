@@ -409,3 +409,9 @@ g(z) = max(0,z)
 $$
 
 <img src="relu graph.png" alt="relu function" width="300" height="auto">
+
+### Why use activation functions
+**Why not use linear for all hidden**
+Because if so, the neural network will just be a linear regression model.
+And if we just make the output activation a sigmoid function then it will be logistic regression
+<img src="act fn exp.png" alt="relu function" width="300" height="auto">
