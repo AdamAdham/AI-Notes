@@ -16,7 +16,7 @@ $$
 - **Cross Entropy function**
 
 $$
-L(f(x), y) = -y \log(f(x)) - (1 - y) \log(1 - f(x))
+L(f(x), y) = -y \log(f(x)) - (1 - y) \log(1 - f(x)) = \frac{e^{\vec{w}_j \cdot \vec{x} + b_j}}{1}
 $$
 
 # Linear Regression
