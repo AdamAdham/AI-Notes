@@ -133,7 +133,7 @@ Given a set of $n$ features $\(\vec{x} = [x_1, x_2, \ldots, x_n]\)$ and $k$ clas
 
 where:
 - $\vec{x}$ is the input feature vector.
-- $\vec{w}_j$is the weight vector for the $j$-th class.
+- $\vec{w}_j$ is the weight vector for the $j$-th class.
 - $b_j$ is the bias term for the $j$-th class.
 - $k$ is the number of classes.
 
