@@ -120,6 +120,23 @@ $$
 \frac{\partial J(\vec{w}, b)}{\partial w_j} = \frac{1}{m} \sum_{i=1}^{m} \left(f_{\vec{w}, b}(\vec{x}^{(i)}) - y^{(i)} \right)x^{(i)} + \frac{\lambda}{m} w_j 
 $$
 
+# Softmax Regression
+
+Classification but not binary
+
+## Softmax Regression Function
+
+Given a set of \( n \) features \(\vec{x} = [x_1, x_2, \ldots, x_n]\) and \( k \) classes, the softmax function for the \( j \)-th class (\( j = 1, 2, \ldots, k \)) is defined as:
+
+\[ P(y = j \mid \vec{x}; \vec{w}_1, \vec{w}_2, \ldots, \vec{w}_k, \vec{b}) = \frac{e^{\vec{w}_j \cdot \vec{x} + b_j}}{\sum_{l=1}^{k} e^{\vec{w}_l \cdot \vec{x} + b_l}} \]
+
+where:
+- \( \vec{x} \) is the input feature vector.
+- \( \vec{w}_j \) is the weight vector for the \( j \)-th class.
+- \( b_j \) is the bias term for the \( j \)-th class.
+- \( k \) is the number of classes.
+
+
 # Deep Learning
 
 - **Layer** : Group of neurons/units
