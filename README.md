@@ -122,7 +122,8 @@ $$
 
 # Softmax Regression
 
-Classification but not binary
+- Classification but not binary (multiclass classification)
+- If at output layer there are 10 units, then there are 10 classes
 
 ## Softmax Regression Function
 
@@ -137,6 +138,9 @@ where:
 - $b_j$ is the bias term for the $j$-th class.
 - $k$ is the number of classes.
 
+## Softmax Loss Function
+
+<img src="softmax loss.png" alt="softmax function" width="500" height="auto">
 
 # Deep Learning
 
@@ -427,6 +431,12 @@ g(z) = max(0,z)
 $$
 
 <img src="relu graph.png" alt="relu function" width="300" height="auto">
+
+### Softmax Function
+- Multiclass classification
+- Only function that leads to output of output layer $a_j$ to be in terms of $z_1$ to $z_n$ where $n$ is the number of classes
+<br>
+[Softmax Function]("#softmax-regression")
 
 ### Why use activation functions
 **Why not use linear for all hidden**
