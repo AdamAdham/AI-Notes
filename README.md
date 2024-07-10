@@ -436,10 +436,11 @@ $$
 - Multiclass classification
 - Only function that leads to output of output layer $a_j$ to be in terms of $z_1$ to $z_n$ where $n$ is the number of classes
 <br>
-[Softmax Function]("#softmax-regression")
+[Softmax Function](#softmax-regression) <br>
 
 ### Why use activation functions
 **Why not use linear for all hidden**
 Because if so, the neural network will just be a linear regression model.
 And if we just make the output activation a sigmoid function then it will be logistic regression
+<br>
 <img src="act fn exp.png" alt="relu function" width="300" height="auto">
