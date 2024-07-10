@@ -436,7 +436,7 @@ $$
 - Multiclass classification
 - Only function that leads to output of output layer $a_j$ to be in terms of $z_1$ to $z_n$ where $n$ is the number of classes
 
-[Gradient descent Algorithm](#gradient-descent) <br>
+[Softmax Function](#gradient-descent) <br>
 
 ### Why use activation functions
 **Why not use linear for all hidden**
