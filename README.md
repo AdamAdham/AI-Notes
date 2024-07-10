@@ -16,7 +16,7 @@ $$
 - **Cross Entropy function**
 
 $$
-L(f(x), y) = -y \log(f(x)) - (1 - y) \log(1 - f(x)) = \frac{e^{\vec{w}_j \cdot \vec{x} + b_j}}{1}
+L(f(x), y) = -y \log(f(x)) - (1 - y) \log(1 - f(x))
 $$
 
 # Linear Regression
@@ -129,7 +129,7 @@ Classification but not binary
 Given a set of $n$ features $\(\vec{x} = [x_1, x_2, \ldots, x_n]\)$ and $k$ classes, the softmax function for the $j$-th class $(\( j = 1, 2, \ldots, k \))$ is defined as:
 
 $$
-P(y = j \mid \vec{x}; \vec{w}_1, \vec{w}_2, \ldots, \vec{w}_k, \vec{b})
+P(y = j \mid \vec{x}; \vec{w}_1, \vec{w}_2, \ldots, \vec{w}_k, \vec{b}) = = \frac{e^{\vec{w}_j \cdot \vec{x} + b_j}}{1}
 $$
 
 
