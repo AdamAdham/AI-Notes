@@ -128,10 +128,7 @@ Classification but not binary
 
 Given a set of $n$ features $\(\vec{x} = [x_1, x_2, \ldots, x_n]\)$ and $k$ classes, the softmax function for the $j$-th class $(\( j = 1, 2, \ldots, k \))$ is defined as:
 
-$$
-P(y = j \mid \vec{x}; \vec{w}_1, \vec{w}_2, \ldots, \vec{w}_k, \vec{b}) = \frac{e^{\vec{w}_j \cdot \vec{x} + b_j}}{\sum_l=1^{k} e^{\vec{w}_l \cdot \vec{x} + b_l}}
-$$
-
+<img src="softmax function.png" alt="softmax function" width="500" height="auto">
 
 
 where:
