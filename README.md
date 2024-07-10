@@ -126,15 +126,17 @@ Classification but not binary
 
 ## Softmax Regression Function
 
-Given a set of \( n \) features \(\vec{x} = [x_1, x_2, \ldots, x_n]\) and \( k \) classes, the softmax function for the \( j \)-th class (\( j = 1, 2, \ldots, k \)) is defined as:
+Given a set of $n$ features $\(\vec{x} = [x_1, x_2, \ldots, x_n]\)$ and $k$ classes, the softmax function for the $j$-th class $(\( j = 1, 2, \ldots, k \))$ is defined as:
 
+$$
 \[ P(y = j \mid \vec{x}; \vec{w}_1, \vec{w}_2, \ldots, \vec{w}_k, \vec{b}) = \frac{e^{\vec{w}_j \cdot \vec{x} + b_j}}{\sum_{l=1}^{k} e^{\vec{w}_l \cdot \vec{x} + b_l}} \]
+$$
 
 where:
-- \( \vec{x} \) is the input feature vector.
-- \( \vec{w}_j \) is the weight vector for the \( j \)-th class.
-- \( b_j \) is the bias term for the \( j \)-th class.
-- \( k \) is the number of classes.
+- $\vec{x}$ is the input feature vector.
+- $\vec{w}_j$is the weight vector for the $j$-th class.
+- $b_j$ is the bias term for the $j$-th class.
+- $k$ is the number of classes.
 
 
 # Deep Learning
