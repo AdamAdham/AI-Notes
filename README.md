@@ -444,3 +444,47 @@ Because if so, the neural network will just be a linear regression model.
 And if we just make the output activation a sigmoid function then it will be logistic regression
 <br>
 <img src="act fn exp.png" alt="relu function" width="300" height="auto">
+
+## Numeric Round Off Error
+**Definition:**
+Numeric round-off error, also known as floating-point round-off error, occurs when a computer approximates a real number with a finite precision representation. This is inherent in digital computation due to the limitations of storing infinitely precise numbers in a finite amount of memory.
+
+**Why It Happens:**
+1. **Finite Precision:** Computers use a fixed number of bits to represent numbers. For example, a common representation is the IEEE 754 standard for floating-point arithmetic, which uses 32 bits (single precision) or 64 bits (double precision).
+2. **Binary Representation:** Not all decimal fractions can be represented exactly in binary form. For example, 0.1 in decimal is a repeating fraction in binary, leading to an approximation.
+3. **Operations:** Arithmetic operations on floating-point numbers (addition, subtraction, multiplication, division) can introduce additional errors. The result of an operation might need to be rounded to fit into the designated number of bits.
+
+**Consequences:**
+1. **Accumulation of Error:** In iterative calculations, such as numerical methods or long-running simulations, small round-off errors can accumulate, leading to significant inaccuracies.
+2. **Precision Limits:** Certain mathematical operations can exacerbate round-off errors, especially when dealing with very large or very small numbers.
+3. **Comparisons:** Testing for equality between floating-point numbers can be problematic. Small errors can lead to unexpected results when comparing numbers that should theoretically be equal.
+
+**Examples:**
+1. **Simple Addition:**
+    ```python
+    a = 0.1
+    b = 0.2
+    c = a + b
+    print(c)  # Outputs 0.30000000000000004 instead of 0.3
+    ```
+
+2. **Subtraction Leading to Loss of Precision:**
+    ```python
+    x = 1.0000001
+    y = 1.0000000
+    z = x - y
+    print(z)
+
+**Solution:**
+
+### Logistic Regression
+
+```python
+model = Sequential ([10,000
+Dense (units=25, activation='relu' ) ,
+Dense (units=15, activation='relu' )
+Dense (units=1, activation='linear' )
+])
+# We changed the output activation function instead of sigmoid
+model. compile (loss=BinaryCrossEntropy (from_logits=True) )
+```
