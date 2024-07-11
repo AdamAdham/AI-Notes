@@ -488,3 +488,6 @@ Dense (units=1, activation='linear' )
 # We changed the output activation function instead of sigmoid
 model. compile (loss=BinaryCrossEntropy (from_logits=True) )
 ```
+<img src="logistic error.png" alt="relu function" width="300" height="auto">
+<img src="softmax error.png" alt="relu function" width="300" height="auto">
+
