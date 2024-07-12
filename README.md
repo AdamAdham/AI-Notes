@@ -530,3 +530,36 @@ _Example:_
 ### How
 You can have 3 seperate neural networks.
 Or you can have 1 neural network with the last layer having 3 units/neurons.
+
+## Back Propagation
+
+<img src="der 1.png" alt="derivitive part 1" width="500" height="auto">
+<img src="der 2.png" alt="derivitive part 2" width="500" height="auto">
+<br>
+Right to left is back prop
+<img src="back prop.png" alt="back propagation" width="500" height="auto">
+
+# Diagnostics
+**A test that you run to gain insight into what is/isn't working with a learning algorithm, to gain guidance into improving its performance**
+
+
+## Evaluating Performance
+**When it is hard to plot the graph of the function**
+_We can split the training set into two subsets, a larger part is the training set and another smaller set is the test set_ <br>
+**This actually has an overly optimistic estimate of the generalization error on the training data since we choose a model, changing the function's degree of polynomial then check the $J_test$** <br>
+_So we instead split the data set into **3** sets 1.Training set 2.Cross validation set(Development set) 3.Test set_
+
+### How to do it
+1. Get $vec{w}$ and $b$ by using the training set to get lowest cost for this data set for a specific degree function $d$
+2. Choose which degree of function (a specific model) $d$ according to lowest cost function for the development set $J_cv$
+3. Estimate generalization error using test set with $J_test$
+
+**Why is this better?** <br>
+_Because in the process of choosing a specific model the test set is not used at all, so the generalization error is truly fair_
+<img src="cv set.png" alt="back propagation" width="500" height="auto">
+
+This can be done for any cost/loss function
+<img src="training set.png" alt="back propagation" width="500" height="auto">
+<br> 
+Can do like the square cost can do for logistic cost (log) or can do this
+<img src="fraction training set.png" alt="back propagation" width="500" height="auto">
