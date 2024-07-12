@@ -250,10 +250,23 @@ else:
 yhat = 0
 ```
 
+### Layer Types
+#### Dense
+Each neuron output is a function of **all** the activation outputs of the previous layers.
+
+#### Convolutional
+Each neuron only looks at a **part** of the previous layer's ouputs (can be overlapping). <br>
+
+_Why?_
+- Faster computation
+- Need less training data (less prone to overfitting)
+
+
 ### Convention
 - Using 2D arrays not 1D even if row/column vector (due to tensorflow being developed for extremely large data sets)
 - Lowercase vars = Scalar/Vectors
 - Uppercase vars = Matrix
+
 
 ## Linear Algebra
 
@@ -401,10 +414,25 @@ from tensorflow. keras. losses import MeanSquaredError
 model.compile (loss= Mean SquaredError())
 ```
 
-### Minimize Cost (Gradient descent)
+### Minimize Cost (Optimization function)
+
+#### Gradient Descent
 [Gradient descent Algorithm](#gradient-descent) <br>
 TensorFlow uses **back propagation** to compute the partial derivitives
 
+#### ADAM Algorithm
+Adaptive moment estimation
+- Has a different learning rate $a$ for every $w$
+- Dynamic learning rate $a$
+- Increases learning rate $a$ if $w_j$ keeps moving towards the same direction
+- Decreases learning rate $a$ if $w_j$ keeps oscillating
+
+```python
+# Same model
+# learning_rate=1e-3 is the initial learning rate
+model. compile (optimizers=tf.keras.optimizaers.Adam(learning_rate=1e-3),
+loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True) )
+```
 ## Activation Functions
 
 ### Linear Function
@@ -491,3 +519,14 @@ model. compile (loss=BinaryCrossEntropy (from_logits=True) )
 <img src="error logistic.png" alt="relu function" width="300" height="auto">
 <img src="error softmax.png" alt="relu function" width="300" height="auto">
 
+## Multi-label Classification
+**Input data leads to multiple outputs.** <br>
+Output y is a **vector**
+
+_Example:_
+**Input:** Image
+**Output:** Is there a car? How many pedestrians? Is there a bus?
+
+### How
+You can have 3 seperate neural networks.
+Or you can have 1 neural network with the last layer having 3 units/neurons.
