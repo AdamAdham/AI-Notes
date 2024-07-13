@@ -563,4 +563,14 @@ Can do like the square cost can do for logistic cost (log) or can do this
 # Diagnostics
 **A test that you run to gain insight into what is/isn't working with a learning algorithm, to gain guidance into improving its performance**
 
+High bias -> Do **Not** get more data
 <img src="fix bias variance.png" alt="back propagation" width="500" height="auto">
+<br>
+- Large neural networks are low bias machines
+- Large neural networks do better or as well as smaller neural network as long as regularization is chosen correctly
+
+<img src="neural network.png" alt="neural network" width="500" height="auto">
+<img src="reg code.png" alt="reg code" width="500" height="auto">
+
+# Machine Learning Development
+<img src="ml loop.png" alt="reg code" width="500" height="auto">
