@@ -539,10 +539,6 @@ Or you can have 1 neural network with the last layer having 3 units/neurons.
 Right to left is back prop
 <img src="back prop.png" alt="back propagation" width="500" height="auto">
 
-# Diagnostics
-**A test that you run to gain insight into what is/isn't working with a learning algorithm, to gain guidance into improving its performance**
-
-
 ## Evaluating Performance
 **When it is hard to plot the graph of the function**
 _We can split the training set into two subsets, a larger part is the training set and another smaller set is the test set_ <br>
@@ -563,3 +559,8 @@ This can be done for any cost/loss function
 <br> 
 Can do like the square cost can do for logistic cost (log) or can do this
 <img src="fraction training set.png" alt="back propagation" width="500" height="auto">
+
+# Diagnostics
+**A test that you run to gain insight into what is/isn't working with a learning algorithm, to gain guidance into improving its performance**
+
+<img src="fix bias variance.png" alt="back propagation" width="500" height="auto">
