@@ -574,3 +574,14 @@ High bias -> Do **Not** get more data
 
 # Machine Learning Development
 <img src="ml loop.png" alt="reg code" width="500" height="auto">
+
+**Data Augmentation:** Modifying an existing training example to create a new training example
+Example:
+An image of the letter 'A'. You can rotate it, change the size, add lines over it or even blur it. Warp a grid of the letter.
+
+**Data Synthesis:** using artificial data inputs to create a new training example
+
+## Transfer Learning
+<img src="transfer learning.png" alt="transfer learning" width="500" height="auto">
+<img src="transfer learning inuition.png" alt="transfer learning inuition" width="500" height="auto">
+<img src="transfer learning summary.png" alt="transfer learning summary" width="500" height="auto">
