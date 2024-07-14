@@ -563,25 +563,29 @@ Can do like the square cost can do for logistic cost (log) or can do this
 # Diagnostics
 **A test that you run to gain insight into what is/isn't working with a learning algorithm, to gain guidance into improving its performance**
 
-High bias -> Do **Not** get more data
-<img src="fix bias variance.png" alt="back propagation" width="500" height="auto">
-<br>
-- Large neural networks are low bias machines
-- Large neural networks do better or as well as smaller neural network as long as regularization is chosen correctly
+**High Bias:** Underfit
+**High Variance:** Overfit
 
-<img src="neural network.png" alt="neural network" width="500" height="auto">
-<img src="reg code.png" alt="reg code" width="500" height="auto">
+# Precision & Recall
 
-# Machine Learning Development
-<img src="ml loop.png" alt="reg code" width="500" height="auto">
+### Precision, Recall, and F1 Score
 
-**Data Augmentation:** Modifying an existing training example to create a new training example
-Example:
-An image of the letter 'A'. You can rotate it, change the size, add lines over it or even blur it. Warp a grid of the letter.
+**Precision:**
+\[ 
+\text{Precision} = \frac{TP}{TP + FP} 
+\]
 
-**Data Synthesis:** using artificial data inputs to create a new training example
+**Recall:**
+\[ 
+\text{Recall} = \frac{TP}{TP + FN} 
+\]
 
-## Transfer Learning
-<img src="transfer learning.png" alt="transfer learning" width="500" height="auto">
-<img src="transfer learning inuition.png" alt="transfer learning inuition" width="500" height="auto">
-<img src="transfer learning summary.png" alt="transfer learning summary" width="500" height="auto">
+**F1 Score:**
+\[ 
+\text{F1 Score} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}} 
+\]
+
+where:
+- \( TP \) = True Positives
+- \( FP \) = False Positives
+- \( FN \) = False Negatives
