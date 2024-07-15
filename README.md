@@ -645,3 +645,11 @@ $p_n^{\text{left}}$: Fraction of examples that are positive classes in the left 
 
 $w_n^{\text{left}}$: Fraction of examples that were split into the left branch
 
+### One Hot Encoding
+Changing a categorical feature with $k$ categories(possible values), to $k$ binary **features**. Only one of the features will have 1 (positive value).
+
+**Example:** <br>
+1 feature:<br>
+position: defender, midfielder, forward 
+3 features: <br>
+isDefender, isMidfielder, isForward
