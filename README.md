@@ -589,6 +589,6 @@ $$
 $$
 
 where:
-- \( TP \) = True Positives
-- \( FP \) = False Positives
-- \( FN \) = False Negatives
+- $TP$ = True Positives
+- $FP$ = False Positives
+- $FN$ = False Negatives
