@@ -630,7 +630,7 @@ High entropy is worse in large amounts of data therefore; <br>
 We take a weighted average to have the larger data set have more influence on the entropy
 <img src="bias variance degree.png" alt="bias variance degree" width="500" height="auto">
 
-**Why not directly use information gain(reduction in entropy)?**
+**Why not directly use information gain(reduction in entropy)?** <br>
 _Because one of the criterias to stop splitting is if the reduction in entropy is below a certain threshold_
 <img src="info gain split.png" alt="bias variance degree" width="500" height="auto">
 <br>
@@ -638,6 +638,9 @@ _Because one of the criterias to stop splitting is if the reduction in entropy i
 ### Information gain
 <img src="info gain.png" alt="info gain" width="500" height="auto">
 Where:
-$p_n^root^$: Fraction of examples that are positive classes in the root node
-$p_n^left^$: Fraction of examples that are positive classes in the left branch
-$w_n^left^$: Fraction of examples that were split into the left branch
+$p_n^{\text{root}}$: Fraction of examples that are positive classes in the root node
+
+$p_n^{\text{left}}$: Fraction of examples that are positive classes in the left branch
+
+$w_n^{\text{left}}$: Fraction of examples that were split into the left branch
+
