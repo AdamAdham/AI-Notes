@@ -571,19 +571,22 @@ Can do like the square cost can do for logistic cost (log) or can do this
 ### Precision, Recall, and F1 Score
 
 **Precision:**
-\[ 
+
+$$
 \text{Precision} = \frac{TP}{TP + FP} 
-\]
+$$
 
 **Recall:**
-\[ 
+
+$$
 \text{Recall} = \frac{TP}{TP + FN} 
-\]
+$$
 
 **F1 Score:**
-\[ 
+
+$$
 \text{F1 Score} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}} 
-\]
+$$
 
 where:
 - \( TP \) = True Positives
