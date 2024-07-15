@@ -565,6 +565,8 @@ Can do like the square cost can do for logistic cost (log) or can do this
 
 **High Bias:** Underfit
 **High Variance:** Overfit
+<img src="bias variance reg parameter.png" alt="bias variance reg parameter" width="500" height="auto">
+<img src="bias variance degree.png" alt="bias variance degree" width="500" height="auto">
 
 # Precision & Recall
 
