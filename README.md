@@ -582,7 +582,8 @@ $$
 \text{Recall} = \frac{TP}{TP + FN} 
 $$
 
-**F1 Score:**
+**F1 Score (Harmonic mean):**
+An average that prioritizes the lower value 
 
 $$
 \text{F1 Score} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}} 
