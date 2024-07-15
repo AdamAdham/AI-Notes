@@ -3,6 +3,7 @@
 # Definitions
 - Deep Learning = Neural Networks = Multilayer perceptron
 - Handwritten digit classification problem = Binary classification
+- Information gain: Reduction of entropy
 - **Variables**
 
 $$
@@ -595,3 +596,48 @@ where:
 - $TP$ = True Positives
 - $FP$ = False Positives
 - $FN$ = False Negatives
+
+# Decision Trees
+
+1. **Decision 1:** How to choose what feature to split on?
+- Maximize Purity
+3. **Decision 2:** When to stop splitting?
+- When a node is 100% one class
+- When splitting a node will result in the tree exceeding a maximum depth
+- When improvements in purity score are below a threshold
+- When number of examples in a node is below a threshold
+
+## Entropy
+It is a measure of impurity (can also use genie criteria)
+
+**Definition:**
+Entropy is a measure of the uncertainty or impurity in a dataset. In the context of classification, it quantifies the amount of disorder or unpredictability in a collection of classes. A lower entropy value indicates a more homogenous set, while a higher value indicates more diversity among the classes.
+
+**Entropy Function:**
+For a discrete random variable $Y$ that can take on $k$ different classes, the entropy $H(Y)$ is defined as:
+
+$$
+H(Y) = -\sum_{i=1}^{k} p(y_i) \log_b(p(y_i))
+$$
+
+where:
+- $p(y_i)$ is the probability of class $y_i$
+- $b$ is the base of the logarithm (commonly base 2 for bits, or base $e$ for nats),
+- $k$ is the total number of classes.
+
+<br>
+High entropy is worse in large amounts of data therefore; <br>
+We take a weighted average to have the larger data set have more influence on the entropy
+<img src="bias variance degree.png" alt="bias variance degree" width="500" height="auto">
+
+**Why not directly use information gain(reduction in entropy)?**
+_Because one of the criterias to stop splitting is if the reduction in entropy is below a certain threshold_
+<img src="info gain split.png" alt="bias variance degree" width="500" height="auto">
+<br>
+
+### Information gain
+<img src="info gain.png" alt="info gain" width="500" height="auto">
+Where:
+$p_n^root^$: Fraction of examples that are positive classes in the root node
+$p_n^left^$: Fraction of examples that are positive classes in the left branch
+$w_n^left^$: Fraction of examples that were split into the left branch
