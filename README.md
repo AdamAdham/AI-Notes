@@ -563,8 +563,8 @@ Can do like the square cost can do for logistic cost (log) or can do this
 # Diagnostics
 **A test that you run to gain insight into what is/isn't working with a learning algorithm, to gain guidance into improving its performance**
 
-**High Bias:** Underfit
-**High Variance:** Overfit
+**High Bias:** Underfit <br>
+**High Variance:** Overfit <br>
 <img src="bias variance reg parameter.png" alt="bias variance reg parameter" width="500" height="auto">
 <img src="bias variance degree.png" alt="bias variance degree" width="500" height="auto">
 
