@@ -638,6 +638,7 @@ _Because one of the criterias to stop splitting is if the reduction in entropy i
 ### Information gain
 <img src="info gain.png" alt="info gain" width="500" height="auto">
 Where:
+
 $p_n^{\text{root}}$: Fraction of examples that are positive classes in the root node
 
 $p_n^{\text{left}}$: Fraction of examples that are positive classes in the left branch
