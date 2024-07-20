@@ -653,3 +653,11 @@ Changing a categorical feature with $k$ categories(possible values), to $k$ bina
 position: defender, midfielder, forward 
 3 features: <br>
 isDefender, isMidfielder, isForward
+
+# NLP 
+**Natural Language Processing**
+
+# Transformers
+
+## Main Paper
+[Attention is all you need](Transformer AI (Attention is all you need))
