@@ -656,6 +656,8 @@ isDefender, isMidfielder, isForward
 
 # NLP 
 **Natural Language Processing**
+[Github repo that trains transformer on any given text](https://github.com/karpathy/nanoGPT) <br>
+One file creates the model and the other trains it.
 
 # Transformers
 
