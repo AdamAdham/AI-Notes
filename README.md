@@ -655,10 +655,10 @@ position: defender, midfielder, forward
 isDefender, isMidfielder, isForward
 
 # NLP 
-**Natural Language Processing**
+**Natural Language Processing** <br>
 [Github repo that trains transformer on any given text](https://github.com/karpathy/nanoGPT) <br>
-One file creates the model and the other trains it.
-
+One file creates the model and the other trains it. <br>
+[Youtube video of the author rewriting the repo](https://youtu.be/kCc8FmEb1nY?si=U5k2hjLQXJsFpYJY)
 # Transformers
 
 ## Main Paper
