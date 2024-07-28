@@ -659,6 +659,11 @@ isDefender, isMidfielder, isForward
 [Github repo that trains transformer on any given text](https://github.com/karpathy/nanoGPT) <br>
 One file creates the model and the other trains it. <br>
 [Youtube video of the author rewriting the repo](https://youtu.be/kCc8FmEb1nY?si=U5k2hjLQXJsFpYJY)
+
+### What Is the Bag of Words Model in NLP?
+The bag of words model is a simple way to convert words to numerical representation in natural language processing. This model is a simple document embedding technique based on word frequency. Conceptually, we think of the whole document as a “bag” of words, rather than a sequence. We represent the document simply by the frequency of each word. Using this technique, we can embed a whole set of documents and feed them into a variety of different machine learning algorithms.<br>
+For example, if we have a vocabulary of 1000 words, then the whole document will be represented by a 1000-dimensional vector, where the vector’s ith entry represents the frequency of the ith vocabulary word in the document.<br>
+Some common uses of the bag of words method include spam filtering, sentiment analysis, and language identification.
 # Transformers
 
 ## Main Paper
