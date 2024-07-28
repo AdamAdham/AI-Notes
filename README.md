@@ -143,6 +143,45 @@ where:
 
 <img src="softmax loss.png" alt="softmax function" width="500" height="auto">
 
+## Feature Scaling
+
+Feature scaling is a technique used to standardize the range of independent variables or features in a dataset. It is an important preprocessing step in many machine learning algorithms, especially those that calculate distances between data points, such as k-nearest neighbors (KNN) and support vector machines (SVM), or those that rely on gradient descent optimization, like neural networks.
+
+### Why Feature Scaling is Important
+
+1. **Different Ranges:** Features in a dataset can have different units and scales. For example, one feature might represent age (ranging from 0 to 100), while another represents income (ranging from hundreds to thousands). Without scaling, the feature with the larger range may dominate the model's learning process, leading to biased or suboptimal results.
+
+2. **Improved Convergence:** In algorithms like gradient descent, feature scaling can improve the convergence speed. Scaled features can help the algorithm reach the optimal solution more efficiently.
+
+3. **Distance-Based Algorithms:** Algorithms that compute distances (e.g., KNN, k-means clustering) can be sensitive to the scale of the data. Feature scaling ensures that each feature contributes equally to the distance calculations.
+
+### Common Feature Scaling Techniques
+
+1. **Min-Max Scaling (Normalization):**
+   - **Description:** This technique rescales the data to a fixed range, usually [0, 1].
+   - **Formula:** `X' = (X - X_min) / (X_max - X_min)`
+   - **Use Case:** Useful when you know the bounds of your data.
+
+2. **Standardization (Z-score Normalization):**
+   - **Description:** This technique transforms the data to have a mean of 0 and a standard deviation of 1.
+   - **Formula:** `X' = (X - μ) / σ`
+   - **Use Case:** Useful when the data has outliers or is not bounded, as it retains the influence of outliers.
+
+3. **MaxAbs Scaling:**
+   - **Description:** This technique scales each feature by its maximum absolute value, ensuring that the data is within the range [-1, 1].
+   - **Formula:** `X' = X / |X_max|`
+   - **Use Case:** Useful when the data is sparse or contains negative values.
+
+4. **Robust Scaling:**
+   - **Description:** This technique uses the median and the interquartile range (IQR) for scaling.
+   - **Formula:** `X' = (X - median) / IQR`
+   - **Use Case:** Useful when the data contains outliers.
+
+### How to Choose a Scaling Technique
+
+The choice of scaling technique depends on the nature of your data and the specific requirements of the machine learning algorithm you're using. For example, standardization is often preferred for algorithms that assume normally distributed data, while normalization is useful when the data has a uniform distribution.
+
+
 # Deep Learning
 
 - **Layer** : Group of neurons/units
