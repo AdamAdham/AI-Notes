@@ -693,6 +693,11 @@ position: defender, midfielder, forward
 3 features: <br>
 isDefender, isMidfielder, isForward
 
+```python
+df_encoded = pd.get_dummies(df, columns=[‘Category’])
+```
+In this example, the get_dummies function is used to one-hot encode the 'Category' column in the DataFrame. The resulting DataFrame (df_encoded) will have new columns for each unique category in the original 'Category' column, with binary values (0 or 1) indicating the presence of each category.
+
 # NLP 
 **Natural Language Processing** <br>
 [Github repo that trains transformer on any given text](https://github.com/karpathy/nanoGPT) <br>
