@@ -307,6 +307,13 @@ _Why?_
 - Lowercase vars = Scalar/Vectors
 - Uppercase vars = Matrix
 
+## Model Building
+
+### Number of layers
+### Number of units
+**Input Layer**: number of features
+**Output Layer**: number of outputs
+
 
 ## Linear Algebra
 
