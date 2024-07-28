@@ -164,17 +164,17 @@ Feature scaling is a technique used to standardize the range of independent vari
 
 2. **Standardization (Z-score Normalization):**
    - **Description:** This technique transforms the data to have a mean of 0 and a standard deviation of 1.
-   - **Formula:** `X' = (X - μ) / σ`
+   - **Formula:** $X' = (X - μ) / σ$
    - **Use Case:** Useful when the data has outliers or is not bounded, as it retains the influence of outliers.
 
 3. **MaxAbs Scaling:**
    - **Description:** This technique scales each feature by its maximum absolute value, ensuring that the data is within the range [-1, 1].
-   - **Formula:** `X' = X / |X_max|`
+   - **Formula:** $X' = X / |X_max|$
    - **Use Case:** Useful when the data is sparse or contains negative values.
 
 4. **Robust Scaling:**
    - **Description:** This technique uses the median and the interquartile range (IQR) for scaling.
-   - **Formula:** `X' = (X - median) / IQR`
+   - **Formula:** $X' = (X - median) / IQR$
    - **Use Case:** Useful when the data contains outliers.
 
 ### How to Choose a Scaling Technique
