@@ -159,7 +159,7 @@ Feature scaling is a technique used to standardize the range of independent vari
 
 1. **Min-Max Scaling (Normalization):**
    - **Description:** This technique rescales the data to a fixed range, usually [0, 1].
-   - **Formula:** $ X' = (X - X_min) / (X_max - X_min) $
+   - **Formula:** $X' = (X - X_min) / (X_max - X_min)$
    - **Use Case:** Useful when you know the bounds of your data.
 
 2. **Standardization (Z-score Normalization):**
