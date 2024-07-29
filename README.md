@@ -326,7 +326,7 @@ _Why?_
 2. Review features
 3. Feature engineering
 4. Feature scaling using [this](#feature-scaling)
-5. Data split using [this](#data-splt)
+5. Data split using [this](#data-split)
 7. Creation of model
 8. Training model
 9. Review model
