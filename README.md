@@ -182,6 +182,20 @@ Feature scaling is a technique used to standardize the range of independent vari
 The choice of scaling technique depends on the nature of your data and the specific requirements of the machine learning algorithm you're using. For example, standardization is often preferred for algorithms that assume normally distributed data, while normalization is useful when the data has a uniform distribution.
 
 
+## Data Split
+
+#### For Evaluating Performance
+**When it is hard to plot the graph of the function**
+_We can split the training set into two subsets, a larger part is the training set and another smaller set is the test set_ <br>
+**This actually has an overly optimistic estimate of the generalization error on the training data since we choose a model, changing the function's degree of polynomial then check the $J_test$** <br>
+_So we instead split the data set into **3** sets 1.Training set 2.Cross validation set(Development set) 3.Test set_
+```python
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.15, random_state=42)
+
+# Further split into train and validation sets
+X_train, X_valid, y_train, y_val = train_test_split(X_train, y_train, test_size=0.20, random_state=42)
+```
+
 # Deep Learning
 
 - **Layer** : Group of neurons/units
@@ -308,6 +322,16 @@ _Why?_
 - Uppercase vars = Matrix
 
 ## Model Building
+1. Import dependencies
+2. Review features
+3. Feature engineering
+4. Feature scaling using [this](#feature-scaling)
+5. Data split using [this](#data-splt)
+7. Creation of model
+8. Training model
+9. Review model
+- If satisfactory -> DONE
+- If not -> 6 or 7
 
 ### Number of layers
 ### Number of units
@@ -585,12 +609,6 @@ Or you can have 1 neural network with the last layer having 3 units/neurons.
 <br>
 Right to left is back prop
 <img src="back prop.png" alt="back propagation" width="500" height="auto">
-
-## Evaluating Performance
-**When it is hard to plot the graph of the function**
-_We can split the training set into two subsets, a larger part is the training set and another smaller set is the test set_ <br>
-**This actually has an overly optimistic estimate of the generalization error on the training data since we choose a model, changing the function's degree of polynomial then check the $J_test$** <br>
-_So we instead split the data set into **3** sets 1.Training set 2.Cross validation set(Development set) 3.Test set_
 
 ### How to do it
 1. Get $vec{w}$ and $b$ by using the training set to get lowest cost for this data set for a specific degree function $d$
