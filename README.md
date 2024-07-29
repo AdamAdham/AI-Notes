@@ -190,10 +190,10 @@ _We can split the training set into two subsets, a larger part is the training s
 **This actually has an overly optimistic estimate of the generalization error on the training data since we choose a model, changing the function's degree of polynomial then check the $J_test$** <br>
 _So we instead split the data set into **3** sets 1.Training set 2.Cross validation set(Development set) 3.Test set_
 ```python
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.15, random_state=42)
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.15, random_state=42)
 
 # Further split into train and validation sets
-X_train, X_valid, y_train, y_val = train_test_split(X_train, y_train, test_size=0.20, random_state=42)
+x_train, x_valid, y_train, y_val = train_test_split(x_train, y_train, test_size=0.20, random_state=42)
 ```
 
 # Deep Learning
