@@ -345,6 +345,14 @@ _Why?_
 **Input Layer**: number of features
 **Output Layer**: number of outputs
 
+## Reviewing the model
+### Why **loss** not just the accuracy:
+#### Handling Class Imbalance
+Adjusting for Imbalance: In cases of class imbalance, where one class is much more frequent than the other, the loss function can help mitigate the effects of imbalance. Loss functions like binary cross-entropy can be modified with class weights to give more importance to the minority class, improving model performance on imbalanced datasets.
+```python
+optimizer = Adam(learning_rate=0.01)  # Adjust learning rate
+model.compile(optimizer=optimizer, loss='binary_crossentropy', metrics=['accuracy'])
+```
 
 ## Linear Algebra
 
