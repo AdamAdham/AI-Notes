@@ -195,6 +195,13 @@ x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.15, random
 # Further split into train and validation sets
 x_train, x_valid, y_train, y_val = train_test_split(x_train, y_train, test_size=0.20, random_state=42)
 ```
+## Building the Model
+
+```python
+from tensorflow. keras.losses import BinaryCrossentropy
+model.compile (loss=BinaryCrossentropy()) # BinaryCrossentropy() is specified as the loss function of binary classification
+model.fit (x_train, y_train, epochs=100) # epochs is the number of steps in gradient descent
+```
 
 # Deep Learning
 
