@@ -724,6 +724,74 @@ $p_n^{\text{left}}$: Fraction of examples that are positive classes in the left 
 
 $w_n^{\text{left}}$: Fraction of examples that were split into the left branch
 
+# Machine Learning Notes
+
+## Regression Trees
+
+### Key Concepts
+- **Regression Trees** are a type of decision tree used for predicting continuous values.
+- They partition the data into subsets using a series of binary splits based on feature values.
+- The goal is to minimize the variance within each subset.
+
+### How It Works
+1. **Splitting the Data**: The data is split into two groups at each node based on the feature that results in the greatest reduction in variance.
+2. **Leaf Nodes**: When a stopping criterion is met (e.g., minimum number of samples per leaf or maximum tree depth), the leaf node is created, which contains the predicted value (typically the mean of the target values in that node).
+
+### Advantages and Disadvantages
+- **Advantages**:
+  - Simple to understand and interpret.
+  - Can handle both numerical and categorical data.
+- **Disadvantages**:
+  - Prone to overfitting.
+  - Sensitive to small changes in the data.
+
+## Sampling with Replacement
+
+### Key Concepts
+- **Sampling with Replacement**: A sampling method where each sample is chosen randomly from the data, and after selection, it is returned to the dataset, allowing it to be chosen again.
+- This method is essential for techniques like **Bootstrap Aggregation (Bagging)**.
+
+### Use in Machine Learning
+- Used in ensemble methods to create multiple training sets from the original dataset.
+- Helps in reducing variance and improving the stability of models.
+
+## Random Forest Algorithm
+
+### Key Concepts
+- **Random Forest** is an ensemble learning method that builds multiple decision trees and merges them to get a more accurate and stable prediction.
+- It uses both bagging (sampling with replacement) and feature randomness to create diverse trees.
+
+### How It Works
+1. **Bootstrap Samples**: Random subsets of the original data are created using sampling with replacement.
+2. **Random Feature Selection**: At each node in a tree, a random subset of features is considered for splitting.
+3. **Aggregation**: The predictions of individual trees are aggregated (averaged for regression, majority vote for classification) to produce the final prediction.
+
+### Advantages and Disadvantages
+- **Advantages**:
+  - Reduces overfitting by averaging multiple models.
+  - Handles large datasets and many features well.
+  - Provides feature importance estimates.
+- **Disadvantages**:
+  - Can be computationally expensive.
+  - Less interpretable than individual decision trees.
+
+## Practical Considerations
+
+- **Hyperparameters to Tune**:
+  - Number of trees (`n_estimators`)
+  - Maximum depth of the trees (`max_depth`)
+  - Number of features to consider at each split (`max_features`)
+
+- **Common Applications**:
+  - Regression tasks (predicting a continuous target variable).
+  - Classification tasks (predicting a categorical target variable).
+
+## Summary
+- Regression Trees and Random Forests are powerful tools in machine learning for both regression and classification tasks.
+- Understanding how to use and tune these models can greatly improve model performance and predictive accuracy.
+
+
+
 ### One Hot Encoding
 Changing a categorical feature with $k$ categories(possible values), to $k$ binary **features**. Only one of the features will have 1 (positive value).
 
@@ -752,3 +820,4 @@ Some common uses of the bag of words method include spam filtering, sentiment an
 
 ## Main Paper
 [Attention is all you need](Transformer AI (Attention is all you need))
+
