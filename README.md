@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/99876f2a-2575-4f8e-ac25-7e3fb2a1d6c2)# AI-Notes
+# AI-Notes
 
 # Definitions
 - Deep Learning = Neural Networks = Multilayer perceptron
