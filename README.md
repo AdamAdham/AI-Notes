@@ -1,4 +1,4 @@
-# AI-Notes
+![image](https://github.com/user-attachments/assets/fe5415a5-5435-4149-bfad-c345e9db674e)# AI-Notes
 
 # Definitions
 - Deep Learning = Neural Networks = Multilayer perceptron
@@ -799,7 +799,8 @@ An adjusted tree that actually chooses the subset of training examples **not** r
 - Regression Trees and Random Forests are powerful tools in machine learning for both regression and classification tasks.
 - Understanding how to use and tune these models can greatly improve model performance and predictive accuracy.
 
-
+# Decision Trees vs Neural Networks
+<img src="./Decision Trees vs Neural Networks.png" alt="Decision Trees vs Neural Networks" height="auto">
 
 
 ### One Hot Encoding
