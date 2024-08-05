@@ -774,6 +774,15 @@ $w_n^{\text{left}}$: Fraction of examples that were split into the left branch
 - **Disadvantages**:
   - Can be computationally expensive.
   - Less interpretable than individual decision trees.
+ 
+## Boosted Trees
+An adjusted tree that actually chooses the subset of training examples **not** randomly with **1/m** probability but according to the previous classification of the ensamble tree, the training example with the least success rate of classification has the highest probability to be chosen 
+<img src="./boosted-trees.png" alt="image" width="500" height="auto">
+
+### Implementation (xgBoost)
+<img src="./xgboost.png" alt="image" width="500" height="auto">
+
+  
 
 ## Practical Considerations
 
@@ -789,6 +798,7 @@ $w_n^{\text{left}}$: Fraction of examples that were split into the left branch
 ## Summary
 - Regression Trees and Random Forests are powerful tools in machine learning for both regression and classification tasks.
 - Understanding how to use and tune these models can greatly improve model performance and predictive accuracy.
+
 
 
 
