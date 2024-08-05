@@ -816,6 +816,99 @@ isDefender, isMidfielder, isForward
 df_encoded = pd.get_dummies(df, columns=[‘Category’])
 ```
 In this example, the get_dummies function is used to one-hot encode the 'Category' column in the DataFrame. The resulting DataFrame (df_encoded) will have new columns for each unique category in the original 'Category' column, with binary values (0 or 1) indicating the presence of each category.
+# Unsupervised Learning
+
+# K-means Algorithm
+
+## Introduction
+K-means is an unsupervised machine learning algorithm used for clustering data into k distinct groups based on similarities. It aims to partition n observations into k clusters in which each observation belongs to the cluster with the nearest mean, serving as a prototype of the cluster.
+
+## Steps of K-means Algorithm
+1. **Initialization**: Choose the number of clusters, k, and initialize the centroids randomly or using some heuristic methods.
+2. **Assignment Step**: Assign each data point to the nearest centroid, forming k clusters.
+3. **Update Step**: Recalculate the centroids as the mean of all data points assigned to each cluster.
+4. **Repeat**: Repeat the assignment and update steps until convergence (i.e., the centroids no longer change) or a maximum number of iterations is reached.
+
+## Algorithm
+1. **Initialization**:
+    - Select k initial centroids randomly from the dataset.
+    - Alternatively, use the K-means++ method to choose initial centroids more strategically to speed up convergence.
+
+2. **Assignment Step**:
+    - For each data point \( x_i \), calculate the distance between \( x_i \) and each centroid.
+    - Assign \( x_i \) to the cluster with the nearest centroid.
+
+3. **Update Step**:
+    - Recompute the centroid of each cluster as the mean of all data points assigned to that cluster.
+    - If no points are assigned to a specific centroid you can either (remove centroid to have k-1 centroids) or (randomly assign centroid to another position)
+
+4. **Convergence**:
+    - Check for convergence by comparing the current centroids with the previous centroids.
+    - If the centroids do not change or the change is minimal (below a threshold), the algorithm has converged.
+
+## Distance Metric
+- The Euclidean distance is the most commonly used metric to measure the distance between data points and centroids:
+\[ \text{Distance}(x, y) = \sqrt{\sum_{i=1}^{n} (x_i - y_i)^2} \]
+
+## Choosing the Number of Clusters (k)
+- The value of k is usually determined using the Elbow Method or the Silhouette Score.
+
+### Elbow Method
+1. Run the K-means algorithm for different values of k (e.g., from 1 to 10).
+2. Calculate the Within-Cluster Sum of Squares (WCSS) for each k.
+3. Plot the WCSS against the number of clusters.
+4. Look for the "elbow point" where the rate of decrease sharply slows down, indicating the optimal number of clusters.
+
+### Silhouette Score
+1. Calculate the silhouette score for different values of k.
+2. The silhouette score measures how similar a data point is to its own cluster compared to other clusters.
+3. Choose the k that maximizes the silhouette score.
+
+## Advantages
+- Simple to understand and implement.
+- Efficient with a time complexity of O(nkt) where n is the number of data points, k is the number of clusters, and t is the number of iterations.
+- Scales well to large datasets.
+
+## Disadvantages
+- Requires specifying the number of clusters (k) in advance.
+- Sensitive to the initial placement of centroids; different initializations can lead to different results.
+- Assumes clusters are spherical and equally sized, which may not be the case in real-world data.
+- May converge to local minima rather than the global minimum.
+
+## Applications
+- Customer segmentation
+- Image compression
+- Anomaly detection
+- Document clustering
+
+## Implementation Example (Python)
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.cluster import KMeans
+
+# Sample data
+X = np.array([[1, 2], [1, 4], [1, 0],
+              [4, 2], [4, 4], [4, 0]])
+
+# Initialize KMeans
+kmeans = KMeans(n_clusters=2, random_state=0).fit(X)
+
+# Get cluster labels
+labels = kmeans.labels_
+
+# Get cluster centroids
+centroids = kmeans.cluster_centers_
+
+# Plot the clusters
+plt.scatter(X[:, 0], X[:, 1], c=labels, s=50, cmap='viridis')
+plt.scatter(centroids[:, 0], centroids[:, 1], c='red', s=200, alpha=0.75)
+plt.show()
+```
+
+### Cost Funtion
+![image](https://github.com/user-attachments/assets/a828c5f7-c5a9-49cb-b119-40a52ace3fe3)
+
 
 # NLP 
 **Natural Language Processing** <br>
