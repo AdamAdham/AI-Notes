@@ -1,4 +1,4 @@
-# AI-Notes
+![image](https://github.com/user-attachments/assets/99876f2a-2575-4f8e-ac25-7e3fb2a1d6c2)# AI-Notes
 
 # Definitions
 - Deep Learning = Neural Networks = Multilayer perceptron
@@ -850,6 +850,13 @@ K-means is an unsupervised machine learning algorithm used for clustering data i
 - The Euclidean distance is the most commonly used metric to measure the distance between data points and centroids:
 \[ \text{Distance}(x, y) = \sqrt{\sum_{i=1}^{n} (x_i - y_i)^2} \]
 
+## Random Initialization
+Since there are local minima then the centroids may get stuck at them and in turn not have the best cluster
+<img src="./local example.png" alt="Decision Trees vs Neural Networks" height="auto">
+#### Algorithm
+<img src="./Random Initialization.png" alt="Random Initialization" height="auto">
+
+
 ## Choosing the Number of Clusters (k)
 - The value of k is usually determined using the Elbow Method or the Silhouette Score.
 
@@ -907,7 +914,9 @@ plt.show()
 ```
 
 ### Cost Funtion
-![image](https://github.com/user-attachments/assets/a828c5f7-c5a9-49cb-b119-40a52ace3fe3)
+#### Distortion Function
+<img src="./cost function.png" alt="Decision Trees vs Neural Networks" height="auto">
+
 
 
 # NLP 
