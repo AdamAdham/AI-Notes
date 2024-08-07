@@ -968,6 +968,7 @@ $$
 ## Choice of Features
 1. Convert non-gaussian (normal) to a gaussian distribution (checked by plt.hist(x)) and can use xNew = log(x+c) or xNew = $x^c$
 2. Can add features to provide better data
+<img src="./feature eng example.png" alt="Decision Trees vs Neural Networks" height="auto">
 
 
 
