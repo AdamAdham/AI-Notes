@@ -854,6 +854,7 @@ K-means is an unsupervised machine learning algorithm used for clustering data i
 ## Random Initialization
 Since there are local minima then the centroids may get stuck at them and in turn not have the best cluster
 <img src="./local example.png" alt="Decision Trees vs Neural Networks" height="auto">
+
 #### Algorithm
 <img src="./Random Initialization.png" alt="Random Initialization" height="auto">
 
@@ -964,6 +965,12 @@ $$
 ## Algorithm
 <img src="./anomaly detection algo.png" alt="Decision Trees vs Neural Networks" height="auto">
 
+## Choice of Features
+1. Convert non-gaussian (normal) to a gaussian distribution (checked by plt.hist(x)) and can use xNew = log(x+c) or xNew = $x^c$
+2. Can add features to provide better data
+
+
+
 ## Implementation Example (Python)
 ```python
 import numpy as np
@@ -987,6 +994,12 @@ plt.ylabel('Frequency')
 plt.show()
 ```
 
+## Anomaly detection vs Supervised
+Anomaly mostly used if there are many different ways to lead to anomaly or lack of positive examples
+<img src="./Anomaly detection vs Supervised.png" alt="Decision Trees vs Neural Networks" height="auto">
+
+### Examples
+<img src="./Anomaly detection vs Supervised Examples.png" alt="Decision Trees vs Neural Networks" height="auto">
 
 
 # NLP 
