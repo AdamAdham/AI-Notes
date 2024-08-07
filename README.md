@@ -950,13 +950,19 @@ Where:
 - **Symmetry**: The normal distribution is symmetric about the mean.
 - **Bell Curve**: The shape of the graph is bell-shaped, with the highest point at the mean.
 - **68-95-99.7 Rule**: 
-  - Approximately 68% of the data falls within one standard deviation (σ) of the mean.
+  - Approximately 68% of the data falls within one standard deviation σ of the mean.
   - Approximately 95% falls within two standard deviations.
   - Approximately 99.7% falls within three standard deviations.
 
 ## Standard Normal Distribution
-A special case of the normal distribution where the mean (μ) is 0 and the standard deviation (σ) is 1. This is represented by \( Z \):
-\[ Z = \frac{X - \mu}{\sigma} \]
+A special case of the normal distribution where the mean μ is 0 and the standard deviation σ is 1. This is represented by  $Z$ :
+
+$$
+Z = \frac{X - \mu}{\sigma}
+$$
+
+## Algorithm
+<img src="./anomaly detection algo.png" alt="Decision Trees vs Neural Networks" height="auto">
 
 ## Implementation Example (Python)
 ```python
@@ -980,6 +986,8 @@ plt.xlabel('Value')
 plt.ylabel('Frequency')
 plt.show()
 ```
+
+
 
 # NLP 
 **Natural Language Processing** <br>
