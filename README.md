@@ -623,7 +623,7 @@ Or you can have 1 neural network with the last layer having 3 units/neurons.
 <img src="der 2.png" alt="derivitive part 2" width="500" height="auto">
 <br>
 Right to left is back prop
-<img src="back prop.png" alt="back propagation" width="500" height="auto">
+<img src="backprop.png" alt="back propagation" width="500" height="auto">
 
 ### How to do it
 1. Get $vec{w}$ and $b$ by using the training set to get lowest cost for this data set for a specific degree function $d$
