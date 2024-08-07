@@ -818,6 +818,7 @@ df_encoded = pd.get_dummies(df, columns=[‘Category’])
 In this example, the get_dummies function is used to one-hot encode the 'Category' column in the DataFrame. The resulting DataFrame (df_encoded) will have new columns for each unique category in the original 'Category' column, with binary values (0 or 1) indicating the presence of each category.
 # Unsupervised Learning
 
+# 1. Clustering
 # K-means Algorithm
 
 ## Introduction
@@ -917,7 +918,65 @@ plt.show()
 #### Distortion Function
 <img src="./cost function.png" alt="Decision Trees vs Neural Networks" height="auto">
 
+# 2. Anomoly Detection
+Finding unusual patterns in a data set
 
+## Gaussian (Normal) Distribution
+
+## Introduction
+The Gaussian (or Normal) distribution is one of the most widely used probability distributions in statistics. It describes how the values of a variable are distributed. The distribution is symmetric, with most of the observations clustering around the central peak and the probabilities for values further away from the mean tapering off equally in both directions.
+
+## Properties
+1. **Mean (μ)**: The central value around which the distribution is symmetric.
+2. **Variance (σ²)**: The measure of how much the values deviate from the mean.
+3. **Standard Deviation (σ)**: The square root of the variance, indicating the dispersion of the dataset.
+
+## Probability Density Function (PDF)
+The PDF of a normal distribution is given by:
+\[ f(x | \mu, \sigma^2) = \frac{1}{\sqrt{2 \pi \sigma^2}} e^{ -\frac{(x - \mu)^2}{2 \sigma^2} } \]
+
+Where:
+- \( x \) is a variable
+- \( \mu \) is the mean
+- \( \sigma^2 \) is the variance
+- \( \sigma \) is the standard deviation
+- \( e \) is Euler's number (approximately 2.71828)
+- \( \pi \) is Pi (approximately 3.14159)
+
+## Characteristics
+- **Symmetry**: The normal distribution is symmetric about the mean.
+- **Bell Curve**: The shape of the graph is bell-shaped, with the highest point at the mean.
+- **68-95-99.7 Rule**: 
+  - Approximately 68% of the data falls within one standard deviation (σ) of the mean.
+  - Approximately 95% falls within two standard deviations.
+  - Approximately 99.7% falls within three standard deviations.
+
+## Standard Normal Distribution
+A special case of the normal distribution where the mean (μ) is 0 and the standard deviation (σ) is 1. This is represented by \( Z \):
+\[ Z = \frac{X - \mu}{\sigma} \]
+
+## Implementation Example (Python)
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.stats import norm
+
+# Parameters
+mu, sigma = 0, 0.1
+
+# Create a sample of 1000 points
+sample = np.random.normal(mu, sigma, 1000)
+
+# Plot histogram of the sample
+count, bins, ignored = plt.hist(sample, 30, density=True, alpha=0.6, color='g')
+
+# Plot the PDF
+plt.plot(bins, norm.pdf(bins, mu, sigma), 'k', linewidth=2)
+plt.title('Histogram and PDF of Normal Distribution')
+plt.xlabel('Value')
+plt.ylabel('Frequency')
+plt.show()
+```
 
 # NLP 
 **Natural Language Processing** <br>
