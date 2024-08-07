@@ -933,7 +933,7 @@ The Gaussian (or Normal) distribution is one of the most widely used probability
 
 ## Probability Density Function (PDF)
 The PDF of a normal distribution is given by:
-\[ f(x | \mu, \sigma^2) = \frac{1}{\sqrt{2 \pi \sigma^2}} e^{ -\frac{(x - \mu)^2}{2 \sigma^2} } \]
+$f(x | \mu, \sigma^2) = \frac{1}{\sqrt{2 \pi \sigma^2}} e^{ -\frac{(x - \mu)^2}{2 \sigma^2} }$
 
 Where:
 - \( x \) is a variable
