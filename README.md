@@ -941,10 +941,10 @@ $$
 Where:
 - $x$ is a variable
 - $mu$ is the mean
-- $sigma^2$ is the variance
-- $sigma$ is the standard deviation
-- $e$ is Euler's number (approximately 2.71828)
-- $pi$ is Pi (approximately 3.14159)
+- $/sigma^2$ is the variance
+- $/sigma$ is the standard deviation
+- $/e$ is Euler's number (approximately 2.71828)
+- $/pi$ is Pi (approximately 3.14159)
 
 ## Characteristics
 - **Symmetry**: The normal distribution is symmetric about the mean.
