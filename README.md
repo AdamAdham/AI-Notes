@@ -971,7 +971,6 @@ $$
 <img src="./feature eng example.png" alt="Decision Trees vs Neural Networks" height="auto">
 
 
-
 ## Implementation Example (Python)
 ```python
 import numpy as np
@@ -995,6 +994,8 @@ plt.ylabel('Frequency')
 plt.show()
 ```
 
+
+
 ## Anomaly detection vs Supervised
 Anomaly mostly used if there are many different ways to lead to anomaly or lack of positive examples
 <img src="./Anomaly detection vs Supervised.png" alt="Decision Trees vs Neural Networks" height="auto">
@@ -1002,7 +1003,20 @@ Anomaly mostly used if there are many different ways to lead to anomaly or lack 
 ### Examples
 <img src="./Anomaly detection vs Supervised Examples.png" alt="Decision Trees vs Neural Networks" height="auto">
 
+# Filtering
 
+### Mean Normalization
+
+Since the regularization term tries to reduce the $w$ parameter
+for all users, the w parameter for all new users will be a vector of 0
+So when predicting, all rating predictions for all movies will be 0
+
+<br>
+Therefore we normalize the values to be with mean of 0 by subtracting the average $\mu$ (model will be faster) and when predicting you will add the average value $\mu$ <br>
+So that when predicting with the new user with $w=0$ it will predict the average $\mu$ instead of 0
+
+<br>
+The example here is normalizing the rows not the columns 
 # NLP 
 **Natural Language Processing** <br>
 [Github repo that trains transformer on any given text](https://github.com/karpathy/nanoGPT) <br>
