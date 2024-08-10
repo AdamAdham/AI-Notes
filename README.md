@@ -1028,7 +1028,18 @@ The example here is normalizing the rows not the columns
 <img src="./Gradient descent for collabrative filtering.png" alt="Gradient descent for collabrative filtering" height="auto">
 ## Auto Diff (Auto Grad)
 <img src="./collabrative filtering implementation.png" alt="Gradient descent for collabrative filtering" height="auto">
+<img src="./collabrative filtering implementation part2.png" alt="Gradient descent for collabrative filtering" height="auto">
 
+## Finding Related Items
+Just get the lowest sum of the squared distance of the features of every item compared to the specified item
+
+$$
+\sum_{i=0}^{n} \left( x_i^k - x_i^j \right)^2
+$$
+
+## Limitations
+### Code start problem
+When new items are added, or users are new to system, which is hard to rate or recommend.
 
 # NLP 
 **Natural Language Processing** <br>
