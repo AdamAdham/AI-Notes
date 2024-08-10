@@ -1003,7 +1003,12 @@ Anomaly mostly used if there are many different ways to lead to anomaly or lack 
 ### Examples
 <img src="./Anomaly detection vs Supervised Examples.png" alt="Decision Trees vs Neural Networks" height="auto">
 
-# Filtering
+# Collabrative Filtering
+$i$ : movie $i$
+$j$ : user $j$
+$n_m$ : number of movies
+$n_u$ : number of users 
+$r(i,j)$ : = 1 if user $j$ has rated movie $j$
 <img src="./collabrative filtering.png" alt="collabrative filtering" height="auto">
 
 ## Mean Normalization
@@ -1021,6 +1026,7 @@ The example here is normalizing the rows not the columns
 
 ## Implementation
 <img src="./Gradient descent for collabrative filtering.png" alt="Gradient descent for collabrative filtering" height="auto">
+## Auto Diff (Auto Grad)
 <img src="./collabrative filtering implementation.png" alt="Gradient descent for collabrative filtering" height="auto">
 
 
