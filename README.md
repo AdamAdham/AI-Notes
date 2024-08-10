@@ -1017,6 +1017,10 @@ So that when predicting with the new user with $w=0$ it will predict the average
 
 <br>
 The example here is normalizing the rows not the columns 
+
+
+## Implementation
+
 # NLP 
 **Natural Language Processing** <br>
 [Github repo that trains transformer on any given text](https://github.com/karpathy/nanoGPT) <br>
