@@ -1041,6 +1041,33 @@ $$
 ### Code start problem
 When new items are added, or users are new to system, which is hard to rate or recommend.
 
+## Why not dense layers model.compile model.fit 
+The reason we couldn't use that old recipe is, the collabrative filtering algorithm and cost function, it doesn't neatly fit into the dense layer or the other standard neural network layer types of TensorFlow
+
+# Content-Based Filtering
+## Introduction
+Content-based filtering is a recommendation system technique that uses the features or characteristics of items (such as products, movies, or articles) to recommend similar items to users. It relies on the content of the items and the preferences of the user to generate personalized recommendations. So soley based on **features** rather than **interaction**.
+
+## How It Works
+- **Feature Extraction**: Each item is represented by a set of features or attributes. For example, a movie might be represented by its genre, director, cast, and keywords.
+- **User Profile**: A user profile is created based on the features of the items the user has interacted with (liked, purchased, viewed, etc.). This profile reflects the user's preferences.
+- **Recommendation**: The system compares the features of new items with the user's profile and recommends items that are similar to the ones the user has liked in the past.
+
+### Example
+If a user has shown interest in science fiction movies, the system will recommend other movies with similar features, such as those with the same genre, similar themes, or the same director.
+
+# Content-Based vs Collaborative Filtering
+
+| Feature                      | Content-Based Filtering                                 | Collaborative Filtering                                |
+|------------------------------|--------------------------------------------------------|--------------------------------------------------------|
+| **Basis for Recommendations**| Uses item features and user preferences                 | Uses user-item interactions across the entire user base|
+| **Data Requirement**         | Needs detailed item feature data                       | Needs a large amount of user interaction data          |
+| **Personalization**          | Highly personalized based on the user's own preferences | Personalization based on similar users' preferences    |
+| **Cold Start Problem**       | Affects new users more                                 | Affects both new users and new items                   |
+| **Diversity**                | Recommends items similar to what the user already likes | Can recommend diverse items based on similar users' tastes |
+| **Scalability**              | Generally more scalable                                | Can be less scalable due to large user-item matrix     |
+| **Explainability**           | Recommendations are easier to explain (based on features)| Recommendations are harder to explain (based on user behavior) |
+
 # NLP 
 **Natural Language Processing** <br>
 [Github repo that trains transformer on any given text](https://github.com/karpathy/nanoGPT) <br>
