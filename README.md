@@ -1004,9 +1004,9 @@ Anomaly mostly used if there are many different ways to lead to anomaly or lack 
 <img src="./Anomaly detection vs Supervised Examples.png" alt="Decision Trees vs Neural Networks" height="auto">
 
 # Filtering
+<img src="./collabrative filtering.png" alt="collabrative filtering" height="auto">
 
-### Mean Normalization
-
+## Mean Normalization
 Since the regularization term tries to reduce the $w$ parameter
 for all users, the w parameter for all new users will be a vector of 0
 So when predicting, all rating predictions for all movies will be 0
@@ -1020,6 +1020,9 @@ The example here is normalizing the rows not the columns
 
 
 ## Implementation
+<img src="./Gradient descent for collabrative filtering.png" alt="Gradient descent for collabrative filtering" height="auto">
+<img src="./collabrative filtering implementation.png" alt="Gradient descent for collabrative filtering" height="auto">
+
 
 # NLP 
 **Natural Language Processing** <br>
