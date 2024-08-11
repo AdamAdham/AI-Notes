@@ -1083,3 +1083,12 @@ Some common uses of the bag of words method include spam filtering, sentiment an
 ## Main Paper
 [Attention is all you need](Transformer AI (Attention is all you need))
 
+
+# General Notes
+
+### Probabilistic vs Deterministic Models
+In deterministic models, the output of the model is fully determined by the parameter values and the initial values, whereas probabilistic (or stochastic) models incorporate randomness in their approach. Consequently, the same set of parameter values and initial conditions will lead to a group of different outputs.
+
+### Deterministic vs Stochastic Models
+Deterministic does **not** invlove randomness while stochastic **does** <br>
+When using a _Deterministic_ model it will always give the same output to a specific input; however, the _Stochastic_ will incorperate randomness so can have **different** ouputs to same input
