@@ -1068,6 +1068,28 @@ If a user has shown interest in science fiction movies, the system will recommen
 | **Scalability**              | Generally more scalable                                | Can be less scalable due to large user-item matrix     |
 | **Explainability**           | Recommendations are easier to explain (based on features)| Recommendations are harder to explain (based on user behavior) |
 
+## Algorithm
+Instead of:
+$w^j$ : for every user $v_u^j$, subscript $u$ is for user, which is computed from user features $x_u^j$ <br>
+$x^i$ : for every movie $v_u^i$, subscript $m$ is for movie, which is computed from movie features $x_m^i$ <br>
+$x^i$ and $w^j$ are the same **size**, even though $x_u^j$ and $x_m^i$ can be **different** size <br>
+Remove $b^j$ <br>
+
+$$
+w^j.x^i+b^j
+$$
+
+## How to get the vectors
+<img src="./how to get vectors.png" alt="Gradient descent for collabrative filtering" height="auto">
+
+## Large Scale Modifications
+### Retrieval and Ranking
+#### Retrieval
+<img src="./Retrieval.png" alt="Gradient descent for collabrative filtering" height="auto">
+#### Ranking
+Since $v_m$ has been computed in the retrieval step then we can only compute $v_u$ for the user
+<img src="./Raking.png" alt="Gradient descent for collabrative filtering" height="auto">
+
 # NLP 
 **Natural Language Processing** <br>
 [Github repo that trains transformer on any given text](https://github.com/karpathy/nanoGPT) <br>
