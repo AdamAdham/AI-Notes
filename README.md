@@ -1056,7 +1056,7 @@ Content-based filtering is a recommendation system technique that uses the featu
 ### Example
 If a user has shown interest in science fiction movies, the system will recommend other movies with similar features, such as those with the same genre, similar themes, or the same director.
 
-# Content-Based vs Collaborative Filtering
+## Content-Based vs Collaborative Filtering
 
 | Feature                      | Content-Based Filtering                                 | Collaborative Filtering                                |
 |------------------------------|--------------------------------------------------------|--------------------------------------------------------|
@@ -1085,10 +1085,111 @@ $$
 ## Large Scale Modifications
 ### Retrieval and Ranking
 #### Retrieval
+Retrieving more items results in better recommendation (performance), but slower recommendations.
 <img src="./Retrieval.png" alt="Gradient descent for collabrative filtering" height="auto">
 #### Ranking
 Since $v_m$ has been computed in the retrieval step then we can only compute $v_u$ for the user
 <img src="./Raking.png" alt="Gradient descent for collabrative filtering" height="auto">
+
+## Code
+
+```python
+import tensorflow as tf
+from tensorflow.keras.models import Model
+
+# Define the number of outputs, which corresponds to the dimensionality of the embedding space
+num_outputs = 32
+
+# Set a random seed for reproducibility
+tf.random.set_seed(1)
+
+# Define the user network as a Sequential model
+user_NN = tf.keras.models.Sequential([
+    # First Dense layer with 256 units and ReLU activation function
+    tf.keras.layers.Dense(256, activation='relu'),
+    # Second Dense layer with 128 units and ReLU activation function
+    tf.keras.layers.Dense(128, activation='relu'),
+    # Output Dense layer with 'num_outputs' units and a linear activation function
+    # This layer outputs the user embedding vector
+    tf.keras.layers.Dense(num_outputs, activation='linear'),
+])
+
+# Define the item network as a Sequential model
+item_NN = tf.keras.models.Sequential([
+    # First Dense layer with 256 units and ReLU activation function
+    tf.keras.layers.Dense(256, activation='relu'),
+    # Second Dense layer with 128 units and ReLU activation function
+    tf.keras.layers.Dense(128, activation='relu'),
+    # Output Dense layer with 'num_outputs' units and a linear activation function
+    # This layer outputs the item embedding vector
+    tf.keras.layers.Dense(num_outputs, activation='linear'),
+])
+
+# Define the user input layer with a shape that matches the number of user features
+input_user = tf.keras.layers.Input(shape=(num_user_features))
+
+# Pass the user input through the user network to get the user embedding vector (vu)
+vu = user_NN(input_user)
+
+# Normalize the user embedding vector using L2 normalization
+vu = tf.linalg.l2_normalize(vu, axis=1)
+
+# Define the item input layer with a shape that matches the number of item features
+input_item = tf.keras.layers.Input(shape=(num_item_features))
+
+# Pass the item input through the item network to get the item embedding vector (vm)
+vm = item_NN(input_item)
+
+# Normalize the item embedding vector using L2 normalization
+vm = tf.linalg.l2_normalize(vm, axis=1)
+
+# Compute the dot product of the two embedding vectors (vu and vm) to get the similarity score
+output = tf.keras.layers.Dot(axes=1)([vu, vm])
+
+# Create a model that takes user and item inputs and outputs the similarity score
+model = Model([input_user, input_item], output)
+
+# Print a summary of the model architecture
+model.summary()
+```
+### Defining vs. Executing a Model
+
+In TensorFlow/Keras, when you define a model and pass an input tensor through it (like `item_NN(input_item)`), you're not actually executing the model in the traditional sense (i.e., feeding real data through it). Instead, you're defining a **computation graph**. Here's how it works:
+
+1. **Defining the Model:**
+   - When you create a `Sequential` model (`item_NN`), you're defining a series of layers that will process inputs in a specified order.
+   - Each layer in the `Sequential` model has a defined operation (e.g., matrix multiplication, activation functions).
+
+2. **Input Tensor:**
+   - `input_item = tf.keras.layers.Input(shape=(num_item_features))` creates a symbolic tensor that represents the input data shape. It doesn't hold any real data yet.
+   - This tensor is like a placeholder that says, "I expect data with this shape when the model runs."
+
+3. **Passing the Input Through the Model:**
+   - When you do `vm = item_NN(input_item)`, you're passing the symbolic `input_item` tensor through the `item_NN` model.
+   - This operation doesn’t process any actual data yet. Instead, it constructs a graph that represents how the input would flow through the model.
+
+4. **Output Tensor:**
+   - The result of `item_NN(input_item)` is another symbolic tensor (`vm`) that represents the output of the model if data were passed through it.
+   - This tensor captures the entire computation from input to output but hasn’t processed real data yet.
+
+### Example to Illustrate:
+
+Consider the following analogy: 
+
+- **Blueprint (Computation Graph):** Imagine you’re designing a machine in a blueprint. The `item_NN` model is like this blueprint, showing how data should flow through each part of the machine (layers).
+- **Symbolic Input (`input_item`):** This is like a drawing of the input that the machine will accept, saying, "The machine will take in an object of this shape."
+- **Passing Input Through the Blueprint:** When you pass the input through the model (`item_NN(input_item)`), you're mapping out how that input would travel through the machine on the blueprint. 
+- **Symbolic Output (`vm`):** The output is the result on the blueprint, showing what the machine would output after processing the input. But until you build and run the machine with actual materials (real data), nothing physical happens.
+
+### Real Execution with Data:
+
+Real execution happens when you eventually feed actual data into the model, typically during training or inference:
+
+- **Training:** When you compile and fit the model with real data, the computation graph is used to process the data, compute the loss, and adjust weights.
+- **Inference:** When you call `model.predict()` or `model(input_data)` with actual data, the data flows through the computation graph to produce a real output.
+
+In summary, when you define a model and pass symbolic inputs through it, you're setting up a computation graph that TensorFlow will use when it eventually processes real data. The output tensor (`vm` in this case) represents what would happen when you feed data into the model, but no actual data processing has occurred at this stage.
+
 
 # NLP 
 **Natural Language Processing** <br>
