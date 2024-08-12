@@ -1151,6 +1151,15 @@ model = Model([input_user, input_item], output)
 
 # Print a summary of the model architecture
 model.summary()
+
+tf.random.set_seed(1)
+cost_fn = tf.keras.losses.MeanSquaredError()
+opt = keras.optimizers.Adam(learning_rate=0.01)
+model.compile(optimizer=opt,
+              loss=cost_fn)
+tf.random.set_seed(1)
+model.fit([user_train[:, u_s:], item_train[:, i_s:]], ynorm_train, epochs=30)
+
 ```
 ### Defining vs. Executing a Model
 
