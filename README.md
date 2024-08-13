@@ -1199,6 +1199,20 @@ Real execution happens when you eventually feed actual data into the model, typi
 
 In summary, when you define a model and pass symbolic inputs through it, you're setting up a computation graph that TensorFlow will use when it eventually processes real data. The output tensor (`vm` in this case) represents what would happen when you feed data into the model, but no actual data processing has occurred at this stage.
 
+# Principal Component Analysis (PCA)
+- PCA is a **dimensionality reduction technique** used in data analysis and machine learning. It transforms a dataset with potentially correlated variables into a set of linearly uncorrelated variables called principal components.
+- The principal components are ordered by the amount of variance they capture from the data, with the first component capturing the most variance.
+<img src="./axis.png" alt="Axis" height="auto">
+<img src="./Project.png" alt="Project" height="auto">
+
+### Approximation
+<img src="./Approximation.png" alt="Approximation" height="auto">
+
+### Implementation
+<img src="./pca steps.png" alt="pca steps" height="auto">
+<img src="./code eg1.png" alt="code eg1" height="auto">
+<img src="./code eg2.png" alt="code eg2" height="auto">
+
 
 # NLP 
 **Natural Language Processing** <br>
