@@ -1222,7 +1222,7 @@ In summary, when you define a model and pass symbolic inputs through it, you're 
 **Policy:** $\pi(state) = action$
 
 ### Markov Decision Process
-Markov means that the performance is only based on the current state not how he got to that state
+Markov means that the future depends on only the current state not how he got to that state
 
 
 # NLP 
