@@ -1218,8 +1218,8 @@ In summary, when you define a model and pass symbolic inputs through it, you're 
 **Actions:** Change of state <br>
 **Rewards:** For each state there is a positive reward or a negative one (punishment) <br>
 **Discount Factor:** The factor mutilpied to the reward for each action taken/ state change<br>
-**Return:** $R_1 + \gammaR_2 + \gamma^2R_3$
-**Policy:** 
+**Return:** $R_1 + \gamma R_2 + \gamma^2R_3$ <br>
+**Policy:** $\pi(state) = action$
 
 ### Markov Decision Process
 Markov means that the performance is only based on the current state not how he got to that state
