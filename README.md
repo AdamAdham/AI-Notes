@@ -1215,6 +1215,7 @@ In summary, when you define a model and pass symbolic inputs through it, you're 
 
 # Reinforcement Learning
 **States:** The conditions of the object/scenario <br>
+**Terminal State:** A state in which no other actions are taken <br>
 **Actions:** Change of state <br>
 **Rewards:** For each state there is a positive reward or a negative one (punishment) <br>
 **Discount Factor:** The factor mutilpied to the reward for each action taken/ state change<br>
@@ -1223,6 +1224,20 @@ In summary, when you define a model and pass symbolic inputs through it, you're 
 
 ### Markov Decision Process
 Markov means that the future depends on only the current state not how he got to that state
+
+### State Action Value Function
+$Q(s,a)$: Return if:
+                     - start at state s
+                     - take action a once
+                     - then behave optimally after that
+
+$$
+Q(s,a) = R(s) + \gamma max Q'(s',a')
+$$
+Where: <br>
+$$R(s)$$: return for state $s$ <br>
+$$s'$$: state that results from action $a$ at state $a$
+$$a'$$: action with most possible reward from state $s'$
 
 
 # NLP 
