@@ -1234,6 +1234,7 @@ $Q(s,a)$: Return if:
 $$
 Q(s,a) = R(s) + \gamma max Q'(s',a')
 $$
+
 Where: <br>
 $$R(s)$$: return for state $s$ <br>
 $$s'$$: state that results from action $a$ at state $a$
