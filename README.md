@@ -1226,10 +1226,10 @@ In summary, when you define a model and pass symbolic inputs through it, you're 
 Markov means that the future depends on only the current state not how he got to that state
 
 ### State Action Value Function
-$Q(s,a)$: Return if:
-                     - start at state s
-                     - take action a once
-                     - then behave optimally after that
+$Q(s,a)$ = The Return if:
+- start at state s
+- take action a once
+- then behave optimally after that
 
 $$
 Q(s,a) = R(s) + \gamma max Q'(s',a')
