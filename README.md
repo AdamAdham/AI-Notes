@@ -1240,6 +1240,143 @@ $$R(s)$$: return for state $s$ <br>
 $$s'$$: state that results from action $a$ at state $a$
 $$a'$$: action with most possible reward from state $s'$
 
+# Embedding
+
+# Using Embeddings for Categorical Features in LSTM Models
+
+The embedding approach is an effective technique for representing categorical features when there are a large number of unique categories. In this approach, each category is mapped to a dense vector of continuous numbers that is learned during training. This method is especially useful in deep learning models like LSTMs, where it’s important to capture relationships between categories in a more compact and flexible manner than one-hot encoding.
+
+## What is an Embedding?
+
+An embedding is a low-dimensional, dense vector representation of a high-dimensional sparse input. In the context of categorical features, each category is represented by a vector of real numbers (learned during training) instead of a single integer or a sparse one-hot vector. This dense vector can capture more nuanced relationships between categories.
+
+**Example:**  
+Suppose you have a categorical feature like `TitleID` with 100 possible unique values. Instead of representing this feature with a one-hot vector of length 100 (which is mostly zeros), you can map each category to a learned vector of, say, 8 dimensions.
+
+## Why Use Embeddings?
+
+- **Dimensionality Reduction:** Embeddings reduce the dimensionality compared to one-hot encoding, which is particularly useful when you have many categories.
+- **Learning Relationships:** The model learns relationships and patterns between categories during training. Categories that are similar can have similar embeddings, which the model can leverage for better predictions.
+- **Efficiency:** Embeddings are more computationally efficient and require less memory.
+
+## How Embeddings Work in TensorFlow/Keras
+
+Here’s a step-by-step explanation and implementation guide for using embeddings with categorical features in an LSTM model.
+
+### 1. Problem Setup
+
+Let’s say you have a feature `TitleID` with 100 unique categories. You want to embed this feature into an 8-dimensional vector.
+
+### 2. Embedding Layer in TensorFlow/Keras
+
+The `Embedding` layer is used to convert categorical indices into dense vectors.
+
+```python
+from tensorflow.keras.layers import Embedding, LSTM, Dense, Input, Reshape, Concatenate
+from tensorflow.keras.models import Model
+
+# Define the input for TitleID (a single integer representing the category)
+title_input = Input(shape=(1,), name='title_input')  # Input shape is (batch_size, 1)
+
+# Define the embedding layer
+title_embedding = Embedding(input_dim=100,  # Number of unique categories (TitleID)
+                            output_dim=8,   # Size of the embedding vector
+                            input_length=1, # Each input is a single integer
+                            name='title_embedding')(title_input)
+
+# Since the output is (batch_size, 1, 8), we might want to reshape it to (batch_size, 8)
+title_embedding = Reshape(target_shape=(8,))(title_embedding)
+```
+
+In this code:
+- `input_dim=100` specifies that the `TitleID` feature has 100 unique categories.
+- `output_dim=8` specifies that each category will be represented as an 8-dimensional vector.
+- `input_length=1` specifies that each input is a single integer (like `TitleID`).
+
+### 3. Handling Multiple Categorical Features
+
+You can use similar embedding layers for other categorical features, such as `DepID`, `Location`, etc.
+
+```python
+dep_input = Input(shape=(1,), name='dep_input')
+dep_embedding = Embedding(input_dim=50, output_dim=5, input_length=1, name='dep_embedding')(dep_input)
+dep_embedding = Reshape(target_shape=(5,))(dep_embedding)
+```
+
+Here, `DepID` is assumed to have 50 unique categories and is embedded into a 5-dimensional vector.
+
+### 4. Combining Embeddings with Other Features
+
+Once you’ve embedded all categorical features, you need to combine them with your other features (e.g., time-series data) before feeding them into the LSTM.
+
+```python
+# Example time-series input (let’s assume it's preprocessed and ready)
+time_series_input = Input(shape=(time_stamps, feature_size), name='time_series_input')
+
+# Combine all inputs (time-series and embedded categorical features)
+merged_inputs = Concatenate()([time_series_input, title_embedding, dep_embedding])
+
+# LSTM layers
+lstm_out = LSTM(64, return_sequences=False)(merged_inputs)
+
+# Output layer (e.g., regression output)
+output = Dense(1, activation='linear')(lstm_out)
+
+# Define the model
+model = Model(inputs=[time_series_input, title_input, dep_input], outputs=output)
+model.compile(optimizer='adam', loss='mse')
+
+# Model summary
+model.summary()
+```
+
+In this model:
+- The `Concatenate` layer merges the time-series input with the embedded categorical features.
+- The merged inputs are passed into the LSTM, allowing the model to learn from both the sequential data and the categorical features simultaneously.
+
+### 5. Training the Model
+
+When training, you’ll need to provide data for each of the inputs separately:
+
+```python
+# Example data
+import numpy as np
+
+# Time-series data (shape: (num_samples, time_stamps, feature_size))
+X_time_series = np.random.random((1000, 10, 20))
+
+# Categorical features (TitleID and DepID)
+X_title = np.random.randint(0, 100, size=(1000, 1))
+X_dep = np.random.randint(0, 50, size=(1000, 1))
+
+# Target values (e.g., employee performance scores)
+y = np.random.random(size=(1000, 1))
+
+# Train the model
+model.fit([X_time_series, X_title, X_dep], y, epochs=10, batch_size=32)
+```
+
+### 6. Interpreting the Embedding Output
+
+Once the model is trained, the embedding weights represent how different categories are related to each other in a dense space. You can extract the learned embeddings like this:
+
+```python
+# Get the weights of the title embedding
+title_embedding_weights = model.get_layer('title_embedding').get_weights()[0]
+print(title_embedding_weights.shape)  # Output shape: (100, 8)
+```
+
+The output shape `(100, 8)` means that each of the 100 categories is represented by an 8-dimensional vector.
+
+## Summary
+
+- **Embeddings** are powerful when you have categorical features with many unique values.
+- The embedding layer maps categories to dense vectors, allowing for efficient learning and capturing relationships between categories.
+- Embeddings are particularly useful in deep learning models (like LSTMs), where dimensionality and relationships among features are crucial.
+- You can use the embeddings in combination with other features (like time-series data) to create a more holistic model.
+
+This approach scales well for large datasets with complex categorical variables and is computationally more efficient compared to one-hot encoding when dealing with high-cardinality features.
+
 
 # NLP 
 **Natural Language Processing** <br>
