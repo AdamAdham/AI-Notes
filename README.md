@@ -141,7 +141,7 @@ where:
 
 ## Softmax Loss Function
 
-<img src="softmax loss.png" alt="softmax function" width="500" height="auto">
+<img src="error softmax.png" alt="softmax function" width="500" height="auto">
 
 ## Feature Scaling
 
