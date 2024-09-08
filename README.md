@@ -627,7 +627,7 @@ Right to left is back prop
 
 ### How to do it
 1. Get $vec{w}$ and $b$ by using the training set to get lowest cost for this data set for a specific degree function $d$
-2. Choose which degree of function (a specific model) $d$ according to lowest cost function for the development set $J_cv$
+2. Choose which degree of function (a specific model) $d$ according to lowest cost function for the development set $J_(cv)$
 3. Estimate generalization error using test set with $J_test$
 
 **Why is this better?** <br>
