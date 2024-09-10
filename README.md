@@ -139,6 +139,106 @@ where:
 - $b_j$ is the bias term for the $j$-th class.
 - $k$ is the number of classes.
 
+# Key points:
+Softmax and Numerical Stability:
+
+## 1. The softmax function converts raw scores (logits) from the model into probabilities.
+- If softmax is applied directly in the final output layer, numerical instability can arise (due to large values in logits leading to potential overflow/underflow).
+- To avoid this, the softmax function is often applied with the loss function (like SparseCategoricalCrossentropy), which results in more stable training.
+
+## 2. Building the Model:
+
+The final Dense layer uses a 'linear' activation, meaning no activation function is applied to the raw logits. This allows the model to output raw scores (logits) rather than probabilities.
+When compiling the model, from_logits=True is specified in the loss function (e.g., tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True)), which tells TensorFlow that the logits are raw and need the softmax applied internally with the loss calculation. This way, you avoid softmax-induced numerical issues during training.
+
+## 3. Using the Model:
+
+The model’s output (raw logits) will not be probabilities. If you want probabilities after training (e.g., for inference), you need to apply softmax manually to convert the logits into probabilities.
+By postponing the application of the softmax to the loss function, it helps with stable gradient calculations during backpropagation, especially when the logits are large or small.
+
+### Understanding the Terms
+
+1. **Logits**: These are the raw, unnormalized scores output by the last layer of your neural network. They can be any real numbers, positive or negative.
+
+2. **Softmax Function**: This function converts logits into probabilities that sum to 1. It does this by exponentiating each logit and dividing by the sum of all exponentials. However, this can cause numerical instability with very large or small logits.
+
+3. **Cross-Entropy Loss**: A loss function that measures the difference between two probability distributions—in this case, the predicted probabilities and the true labels.
+
+### The Problem with Applying Softmax Directly
+
+- **Numerical Instability**: Applying softmax directly to logits in the output layer can lead to numerical issues like overflow or underflow. This happens because the exponential function in softmax can produce extremely large or tiny numbers when dealing with large positive or negative logits.
+
+### The Solution: Using `from_logits=True`
+
+When you set `from_logits=True` in your loss function (e.g., `tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True)`), you're instructing TensorFlow to:
+
+1. **Understand that Outputs are Raw Logits**: It knows the model outputs are unnormalized scores and that softmax hasn't been applied yet.
+
+2. **Apply Softmax Internally**: TensorFlow combines the softmax function with the cross-entropy loss in a single, numerically stable operation. This method avoids the intermediate computation of probabilities, which can be unstable.
+
+3. **Enhance Numerical Stability**: By computing the loss in this combined way, TensorFlow reduces the risk of numerical errors during training.
+
+### Why This Matters
+
+- **Stable Training**: Numerical instability can lead to incorrect gradient calculations, causing the training process to fail or converge poorly.
+
+- **Simpler Model Architecture**: By not including the softmax layer in your model, you simplify the architecture and delegate the responsibility of converting logits to probabilities to the loss function during training.
+
+### What Happens Under the Hood
+
+TensorFlow uses a function that combines softmax and cross-entropy in one step, often referred to as `softmax_cross_entropy_with_logits`. This function computes the cross-entropy loss without ever explicitly calculating the softmax probabilities, thus avoiding numerical issues.
+
+### Practical Steps
+
+- **Model Definition**:
+  ```python
+  # Final layer without activation function
+  model.add(Dense(num_classes))  # No activation specified means 'linear' by default
+  ```
+
+- **Model Compilation**:
+  ```python
+  # Specify from_logits=True in the loss function
+  loss_fn = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True)
+  model.compile(optimizer='adam', loss=loss_fn, metrics=['accuracy'])
+  ```
+
+- **During Training**:
+  - The model outputs logits.
+  - The loss function internally applies softmax in a stable way.
+  - You don't have to worry about numerical issues caused by softmax.
+
+- **During Inference (Making Predictions)**:
+  - The model still outputs logits.
+  - If you need probabilities, manually apply softmax to the logits.
+    ```python
+    predictions = model.predict(new_data)
+    probabilities = tf.nn.softmax(predictions).numpy()
+    ```
+
+### Visualizing the Numerical Stability
+
+Suppose you have logits `[1000, 1001, 999]`. Computing softmax directly:
+
+- Exponentials become `[exp(1000), exp(1001), exp(999)]`, which are huge numbers and can cause overflow.
+
+When TensorFlow handles softmax internally with the loss function:
+
+- It uses mathematical tricks (like subtracting the max logit value) to keep the numbers in a manageable range, preventing overflow.
+
+### Key Takeaways
+
+- **Avoiding Softmax in Output Layer**: By not applying softmax in the model's output layer, you prevent potential numerical instability during training.
+
+- **Using `from_logits=True`**: This tells TensorFlow to handle the logits appropriately within the loss function, ensuring stable and accurate training.
+
+- **Post-Training Predictions**: Since the model outputs logits, you need to apply softmax manually to interpret the outputs as probabilities when making predictions.
+
+### Conclusion
+
+By specifying `from_logits=True` in your loss function, you're improving the numerical stability of your model during training. TensorFlow takes care of combining the softmax function with the loss calculation in a way that avoids the pitfalls of directly applying softmax to logits with large magnitude.
+
+
 ## Softmax Loss Function
 
 <img src="error softmax.png" alt="softmax function" width="500" height="auto">
