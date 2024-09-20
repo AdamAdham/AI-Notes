@@ -453,8 +453,6 @@ Adjusting for Imbalance: In cases of class imbalance, where one class is much mo
 optimizer = Adam(learning_rate=0.01)  # Adjust learning rate
 model.compile(optimizer=optimizer, loss='binary_crossentropy', metrics=['accuracy'])
 ```
-### Good understanding of convolution
-[Informative video](https://youtu.be/KuXjwB4LzSA?si=obIoqyWGPqZ5wn7l)
 
 ## Linear Algebra
 
@@ -1479,6 +1477,16 @@ The output shape `(100, 8)` means that each of the 100 categories is represented
 
 This approach scales well for large datasets with complex categorical variables and is computationally more efficient compared to one-hot encoding when dealing with high-cardinality features.
 
+# Convolution
+
+## Explanation
+The model tries to learn specific kernels/filters (the grids that are multuplied for each pixel) to extract the most meaningful information out of an image.
+
+## Mathematical Context
+The kernel is actually flipped 180deg before applying the convolution, think of the dice problem refer to this [video](#good-understanding-of-convolution)
+
+### Good understanding of convolution
+[Informative video](https://youtu.be/KuXjwB4LzSA?si=obIoqyWGPqZ5wn7l)
 
 # NLP 
 **Natural Language Processing** <br>
