@@ -453,6 +453,8 @@ Adjusting for Imbalance: In cases of class imbalance, where one class is much mo
 optimizer = Adam(learning_rate=0.01)  # Adjust learning rate
 model.compile(optimizer=optimizer, loss='binary_crossentropy', metrics=['accuracy'])
 ```
+### Good understanding of convolution
+[Informative video](https://youtu.be/KuXjwB4LzSA?si=obIoqyWGPqZ5wn7l)
 
 ## Linear Algebra
 
