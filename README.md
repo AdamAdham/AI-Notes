@@ -1529,6 +1529,11 @@ Returns maximum of the cells in the filter
 #### 2. Average Pooling
 Returns the average of the cells in the filter
 
+## Dense Layers
+After the convolution and pooling layers dense/fully connected layers are added to: <br>
+1. Classify ouput
+2. Assoiciate features to a particular label
+
 # NLP 
 **Natural Language Processing** <br>
 [Github repo that trains transformer on any given text](https://github.com/karpathy/nanoGPT) <br>
