@@ -1505,6 +1505,13 @@ The kernel is actually flipped 180deg before applying the convolution, think of 
 ### Good understanding of convolution
 [Informative video](https://youtu.be/KuXjwB4LzSA?si=obIoqyWGPqZ5wn7l)
 
+## Stride Convolution
+**Stride is just the increment of the filter horizontally and vertically**
+
+$$
+output dimension= floor((n+2p-f)/(s))+1
+$$
+
 # NLP 
 **Natural Language Processing** <br>
 [Github repo that trains transformer on any given text](https://github.com/karpathy/nanoGPT) <br>
