@@ -325,6 +325,7 @@ x= np.array([200,17])        # 1D vector/array
 <br>
 
 - **Dense**: Type of layer
+- The number of connections (previous layer neuros x current layer neurons)
 
 Without Vectorization
 ```python
