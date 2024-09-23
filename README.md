@@ -1543,6 +1543,33 @@ After the convolution and pooling layers, the output is flattened and a rdsd.den
 2. $Relu(result+b_i)$
 For each filter a new $b_i$ is used
 
+# Recurrent Neural Networks
+[Video](https://youtu.be/AsNTP8Kwu80?si=Y7ltxMgL-RnrGzsh)
+[Video](https://youtu.be/AsNTP8Kwu80?si=QkaQa9SRjEDaXw2P)
+
+Recurrent Neural Networks (RNNs) are a type of neural network designed to process sequences of data. Unlike traditional neural networks, RNNs have connections that form cycles, allowing them to retain information from previous steps in the sequence, which makes them well-suited for tasks involving time series, language, or any data where context from previous steps is important.
+
+### Key Concepts of RNNs:
+1. **Sequential Data Processing**: RNNs are ideal for data that comes in sequences, such as time series (e.g., stock prices), text (e.g., sentences), or audio (e.g., speech). Each element in the sequence is processed one at a time, and the network maintains a hidden state that captures information from previous elements.
+
+2. **Hidden State**: At each time step, the RNN updates its hidden state based on the current input and the hidden state from the previous step. This hidden state acts as memory, allowing the network to remember information about previous inputs.
+
+3. **Weight Sharing**: RNNs use the same weights for each time step, which makes them efficient for processing sequences of any length. This weight sharing allows the network to generalize well across time steps.
+
+4. **Backpropagation Through Time (BPTT)**: RNNs are trained using a variation of backpropagation called backpropagation through time. During training, the network's errors are propagated backward through the entire sequence, which allows the model to learn from past and present data. However, this can lead to challenges like the **vanishing gradient problem**, where gradients become too small for effective learning in long sequences.
+
+5. **Applications**:
+   - **Natural Language Processing (NLP)**: RNNs are widely used in tasks like machine translation, text generation, and sentiment analysis.
+   - **Time Series Prediction**: RNNs can model sequential dependencies, making them useful for predicting stock prices, weather, or any time-dependent data.
+   - **Speech Recognition**: RNNs can capture temporal dependencies in audio data, making them useful for speech and audio processing tasks.
+
+### Variants of RNNs:
+- **Long Short-Term Memory (LSTM)**: LSTMs are designed to handle the vanishing gradient problem by introducing gates that control the flow of information through the network. This allows the network to retain information over long sequences.
+- **Gated Recurrent Units (GRU)**: GRUs are a simplified version of LSTMs that also address the vanishing gradient problem with fewer parameters.
+
+RNNs are powerful for sequence-based tasks, but models like LSTMs and GRUs are often preferred due to their ability to capture longer dependencies more effectively.<br>
+
+
 # NLP 
 **Natural Language Processing** <br>
 [Github repo that trains transformer on any given text](https://github.com/karpathy/nanoGPT) <br>
