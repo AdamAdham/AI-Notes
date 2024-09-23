@@ -1478,7 +1478,7 @@ The output shape `(100, 8)` means that each of the 100 categories is represented
 This approach scales well for large datasets with complex categorical variables and is computationally more efficient compared to one-hot encoding when dealing with high-cardinality features.
 
 # Convolution
-
+Information gathered from multiple youtube videos, article and GAI but mostly from this [video](https://youtube.com/playlist?list=PLuhqtP7jdD8CD6rOWy20INGM44kULvrHu&si=Sp58IylhAoWmWLi7)
 ## Explanation
 - The model tries to learn specific kernels/filters (the grids that are multuplied for each pixel) to extract the most meaningful information out of an image.
 - Resulting Matrix of convolution of an (nxn) matrix with (fxf) filter = (n-f+1)x(n-f+1)
@@ -1511,6 +1511,23 @@ The kernel is actually flipped 180deg before applying the convolution, think of 
 $$
 output dimension= floor((n+2p-f)/(s))+1
 $$
+
+## Pooling
+- Reduce size while preserving features
+- 1 input matrix will result in 1 downsized ouput matrix
+- No parameters involved (simple transformation) so no training is needed
+- Applied only after convolution layers
+
+### Why
+1. Reduce image size, resulting in reduction in computational cost (training/prediction takes less time)
+2. Enhances Features
+
+### Pooling Examples
+#### 1. Max Pooling
+Returns maximum of the cells in the filter
+
+#### 2. Average Pooling
+Returns the average of the cells in the filter
 
 # NLP 
 **Natural Language Processing** <br>
