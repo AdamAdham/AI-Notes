@@ -1569,6 +1569,12 @@ Recurrent Neural Networks (RNNs) are a type of neural network designed to proces
 
 RNNs are powerful for sequence-based tasks, but models like LSTMs and GRUs are often preferred due to their ability to capture longer dependencies more effectively.<br>
 
+### RNN Cell
+- Hidden State is the output without applying the activation function $h_t$
+![Rnn cell from ipad ss](link.png)
+
+### Types of RNNs
+![image of types](image.png)
 
 # NLP 
 **Natural Language Processing** <br>
