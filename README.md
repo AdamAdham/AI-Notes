@@ -305,6 +305,9 @@ model.fit (x_train, y_train, epochs=100) # epochs is the number of steps in grad
 
 # Deep Learning
 
+## Backpropagation
+[Goated video](https://youtu.be/Ilg3gGewQ5U?si=6k60zbtAdjmcVZa6)
+
 - **Layer** : Group of neurons/units
 - **Unit** : A processes the input and produces output
 - **Activations** : Output from the layer
