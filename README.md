@@ -1485,6 +1485,20 @@ This approach scales well for large datasets with complex categorical variables 
 - For each filter there is an output image of size (stated above)
 - For RGB image (nxnx3) with filter (fxfx3) will result in (n-f+1)x(n-f+1)x(1)
 
+### Problems
+When applying the filter
+- The resulting matrix is smaller than the input matrix (Valid convolution)
+- Border pixels are processed less than pixels in the middle
+
+#### Solution
+- Add padding to the input matrix (Same convolution)
+
+#### Calculations
+- $n_new= n + 2p$
+- solve $n+2p-f+1=n$ equating resulting matrix size by input size $n$
+- $p=(f-1)/2$
+- $f$ is usually odd
+
 ## Mathematical Context
 The kernel is actually flipped 180deg before applying the convolution, think of the dice problem refer to this [video](#good-understanding-of-convolution)
 
