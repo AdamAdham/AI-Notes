@@ -1480,7 +1480,10 @@ This approach scales well for large datasets with complex categorical variables 
 # Convolution
 
 ## Explanation
-The model tries to learn specific kernels/filters (the grids that are multuplied for each pixel) to extract the most meaningful information out of an image.
+- The model tries to learn specific kernels/filters (the grids that are multuplied for each pixel) to extract the most meaningful information out of an image.
+- Resulting Matrix of convolution of an (nxn) matrix with (fxf) filter = (n-f+1)x(n-f+1)
+- For each filter there is an output image of size (stated above)
+- For RGB image (nxnx3) with filter (fxfx3) will result in (n-f+1)x(n-f+1)x(1)
 
 ## Mathematical Context
 The kernel is actually flipped 180deg before applying the convolution, think of the dice problem refer to this [video](#good-understanding-of-convolution)
