@@ -1530,9 +1530,14 @@ Returns maximum of the cells in the filter
 Returns the average of the cells in the filter
 
 ## Dense Layers
-After the convolution and pooling layers dense/fully connected layers are added to: <br>
+After the convolution and pooling layers, the output is flattened and a rdsd.dense/fully connected layers are added to: <br>
 1. Classify ouput
 2. Assoiciate features to a particular label
+
+## Convolution **Layer**
+1. Applies convolution
+2. $Relu(result+b_i)$
+For each filter a new $b_i$ is used
 
 # NLP 
 **Natural Language Processing** <br>
