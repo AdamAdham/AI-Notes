@@ -1572,9 +1572,13 @@ RNNs are powerful for sequence-based tasks, but models like LSTMs and GRUs are o
 ### RNN Cell
 - Hidden State is the output without applying the activation function $h_t$
 ![Rnn cell from ipad ss](link.png)
+- When you think of the unfolded RNN this whole thing is a *single* hidden layer.
+- So $h_i$ is the value of the hidden layer at the $i$th timestep
+![image of unfolded RNN](image.png)
 
 ### Types of RNNs
 ![image of types](image.png)
+
 
 # NLP 
 **Natural Language Processing** <br>
