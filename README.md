@@ -869,6 +869,7 @@ $w_n^{\text{left}}$: Fraction of examples that were split into the left branch
 1. **Bootstrap Samples**: Random subsets of the original data are created using sampling with replacement.
 2. **Random Feature Selection**: At each node in a tree, a random subset of features is considered for splitting.
 3. **Aggregation**: The predictions of individual trees are aggregated (averaged for regression, majority vote for classification) to produce the final prediction.
+Bootstrap + Aggregation = Bagging
 
 ### Advantages and Disadvantages
 - **Advantages**:
