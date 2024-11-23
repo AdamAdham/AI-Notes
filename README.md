@@ -14,7 +14,7 @@ $$
 y^{(i)} = \text{value of result set } i
 $$
 
-- **Cross Entropy function**
+- **Cross Entropy function(For comparing 2 probability distributions)**
 
 $$
 L(f(x), y) = -y \log(f(x)) - (1 - y) \log(1 - f(x))
