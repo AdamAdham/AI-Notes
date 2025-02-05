@@ -1,4 +1,8 @@
-# AI-Notes
+# Hands-on Knowledge
+## Categorical Data
+Eventhough when I tested the differnce the only difference is the order of columns, the easier use for:
+**Labels** = [LabelBinarizer](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelBinarizer.html)
+# Course Knowledge
 
 # Definitions
 - Deep Learning = Neural Networks = Multilayer perceptron
