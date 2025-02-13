@@ -7,9 +7,11 @@ Eventhough when I tested the differnce the only difference is the order of colum
 
 Where: <br>
 $n^{[l]}$ = Number of neurons in layer $l$
+
 $$
 Dim(W^{[l]}) = (n^{[l]}, n^{[l-1]})
 $$
+
 $$
 Dim(b^{[l]}) = (n^{[l]},1)
 $$
