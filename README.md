@@ -3,8 +3,8 @@
 Eventhough when I tested the differnce the only difference is the order of columns, the easier use for:
 **Labels** = [LabelBinarizer](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelBinarizer.html)
 
-## Parameter Shape/Dimensions
-
+# Parameter Shape/Dimensions
+## Simplified
 $$
 y = Wx + b
 $$
@@ -23,6 +23,71 @@ $$
 
 Where: <br>
 $n^{[l]}$ = Number of neurons in layer $l$
+
+## Actual
+
+### 1. Formula
+For a **single input** vector:
+
+$$
+y = Wx + b
+$$
+
+For a **batch** of $N$ inputs:
+
+$$
+Y = XW^\top + b
+$$
+
+- $X \in \mathbb{R}^{N \times d_{in}}$ → batch of inputs  
+- $W \in \mathbb{R}^{d_{out} \times d_{in}}$ → weight matrix  
+- $b \in \mathbb{R}^{d_{out}}$ → bias vector  
+- $Y \in \mathbb{R}^{N \times d_{out}}$ → batch of outputs  
+
+---
+
+### 2. Dimensions
+- Input shape (single sample): $(d_{in},)$  
+- Input shape (batch): $(N, d_{in})$  
+
+- Weight matrix shape: $(d_{out}, d_{in})$  
+- Bias vector shape: $(d_{out},)$  
+
+- Output shape (single sample): $(d_{out},)$  
+- Output shape (batch): $(N, d_{out})$  
+
+---
+
+### 3. Parameters
+- Number of weights: $d_{out} \cdot d_{in}$  
+- Number of biases: $d_{out}$  
+
+Total parameters:
+
+$$
+\text{params} = d_{out}(d_{in} + 1)
+$$
+
+> Note: The number of parameters does **not** depend on the batch size $N$.  
+
+---
+
+### 4. Multi-Layer Network
+Suppose we have a network with:  
+- Input size = $n_0$  
+- Hidden layers = $n_1, n_2, ..., n_{L-1}$  
+- Output size = $n_L$  
+
+For layer $l$ (connecting $n_{l-1} \to n_l$):  
+- Weights: $n_l \cdot n_{l-1}$  
+- Biases: $n_l$  
+- Output shape (batch): $(N, n_l)$  
+
+Total parameters across the network:
+
+$$
+\sum_{l=1}^{L} \big(n_l \cdot n_{l-1} + n_l\big)
+$$
 
 # Course Knowledge
 
