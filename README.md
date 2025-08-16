@@ -5,8 +5,13 @@ Eventhough when I tested the differnce the only difference is the order of colum
 
 ## Parameter Shape/Dimensions
 
-Where: <br>
-$n^{[l]}$ = Number of neurons in layer $l$
+$$
+y = Wx + b
+$$
+- Input shape: $(d_{in},)$  
+- Weight matrix shape: $(d_{out}, d_{in})$  
+- Bias vector shape: $(d_{out},)$  
+- Output shape: $(d_{out},)$
 
 $$
 Dim(W^{[l]}) = (n^{[l]}, n^{[l-1]})
@@ -15,6 +20,9 @@ $$
 $$
 Dim(b^{[l]}) = (n^{[l]},1)
 $$
+
+Where: <br>
+$n^{[l]}$ = Number of neurons in layer $l$
 
 # Course Knowledge
 
